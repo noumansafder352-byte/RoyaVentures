@@ -49,7 +49,7 @@ const SOFTWARE_LOGOS: PartnerLogo[] = [
 ];
 
 const AI_VIDEO_LOGOS: PartnerLogo[] = [
-  { name: "Coram", url: CoramLogo },
+  { name: "Coram", url: coramLogo },
   { name: "Trassir", url: trassirLogo },
   { name: "Vizo361", url: vizo361Logo },
 ];
