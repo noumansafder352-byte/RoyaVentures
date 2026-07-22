@@ -12,8 +12,8 @@ import prestigeLogo from "@/assets/partners/core/prestige.png";
 import entry2exitLogo from "@/assets/partners/software/entry2exit.png";
 import fadelLogo from "@/assets/partners/software/fadel.png";
 import odooLogo from "@/assets/partners/software/odoo.png";
-import sapaadLogo from "@/assets/partners/software/sapaad.png";
-import coramLogo from "@/assets/partners/ai-video/coram.png";
+import sapaadLogo from "@/assets/partners/software/Sapaad.png";
+import coramLogo from "@/assets/partners/ai-video/Coram.png";
 import trassirLogo from "@/assets/partners/ai-video/trassir.png";
 import vizo361Logo from "@/assets/partners/ai-video/vizo361.png";
 import windroLogo from "@/assets/partners/smart-screens/windro.png";
@@ -49,7 +49,7 @@ const SOFTWARE_LOGOS: PartnerLogo[] = [
 ];
 
 const AI_VIDEO_LOGOS: PartnerLogo[] = [
-  { name: "Coram", url: coramLogo },
+  { name: "Coram", url: CoramLogo },
   { name: "Trassir", url: trassirLogo },
   { name: "Vizo361", url: vizo361Logo },
 ];
