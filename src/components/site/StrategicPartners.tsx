@@ -58,6 +58,7 @@ const CATEGORIES: { key: string; label: string; logos: Logo[] }[] = [
   },
 ];
 
+
 export function StrategicPartners() {
   const [active, setActive] = useState(CATEGORIES[0].key);
   const activeCategory = CATEGORIES.find((c) => c.key === active) ?? CATEGORIES[0];
