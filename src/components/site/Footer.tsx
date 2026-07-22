@@ -57,14 +57,14 @@ export function Footer() {
 
             <div className="inline-flex items-center gap-5 md:gap-6 rounded-2xl bg-white/95 px-5 py-3.5 shadow-lg ring-1 ring-white/20">
               <img
-                src={logo.url}
+                src="/image/roya-logo.png"
                 alt="Roya Ventures"
                 className="h-12 md:h-14 lg:h-16 w-auto"
                 loading="lazy"
               />
               <span aria-hidden className="h-10 md:h-12 w-px bg-[var(--navy)]/15" />
               <img
-                src={visionLogo.url}
+                src="/image/vision-2030-v3.png"
                 alt="Saudi Vision 2030"
                 className="h-12 md:h-14 lg:h-16 w-auto"
                 loading="lazy"

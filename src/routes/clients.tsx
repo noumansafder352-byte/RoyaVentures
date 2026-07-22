@@ -9,89 +9,152 @@ import heroClients from "@/assets/hero-clients.jpg";
 import featureImage from "@/assets/svc-datacenter.jpg";
 
 // Auto-import all 32 client logo asset pointers
-const logoModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/clients*.jpg.asset.json",
-  { eager: true },
+// const logoModules = import.meta.glob<{ default: { url: string } }>(
+//   "@/assets/clients/clients*.jpg.asset.json",
+//   { eager: true },
+// );
+// const CLIENT_LOGOS = Object.entries(logoModules)
+//   .map(([path, mod]) => {
+//     const n = Number(path.match(/clients(\d+)\.jpg/)?.[1] ?? 0);
+//     return { n, url: mod.default.url };
+//   })
+//   .sort((a, b) => a.n - b.n);
+// Auto-import all client logos
+const logoModules = import.meta.glob<string>(
+  "../assets/clients/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
+
 const CLIENT_LOGOS = Object.entries(logoModules)
   .map(([path, mod]) => {
-    const n = Number(path.match(/clients(\d+)\.jpg/)?.[1] ?? 0);
-    return { n, url: mod.default.url };
+    const name = path.split("/").pop()?.replace(".png", "") ?? "";
+
+    return {
+      name,
+      url: mod as string,
+    };
   })
-  .sort((a, b) => a.n - b.n);
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 // Global Luxury Brands — official logos
-const luxuryModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/luxury/*.png.asset.json",
-  { eager: true },
+const luxuryModules = import.meta.glob<string>(
+  "../assets/clients/luxury/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
 const LUXURY_LOGOS = Object.entries(luxuryModules)
   .map(([path, mod]) => {
     const name = path.match(/luxury\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+    return { name, url: mod as string };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Premium Fashion — official logos
-const fashionModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/fashion/*.png.asset.json",
-  { eager: true },
+// Premium Fashion — official logos
+const fashionModules = import.meta.glob<string>(
+  "../assets/clients/fashion/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
+
 const FASHION_LOGOS = Object.entries(fashionModules)
   .map(([path, mod]) => {
-    const name = path.match(/fashion\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+    const name = path.match(/fashion\/(.+)\.png$/)?.[1] ?? "";
+    return {
+      name,
+      url: mod as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Beauty & Cosmetics — official logos
-const beautyModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/beauty/*.png.asset.json",
-  { eager: true },
+// Beauty & Cosmetics — official logos
+const beautyModules = import.meta.glob<string>(
+  "../assets/clients/beauty/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
+
 const BEAUTY_LOGOS = Object.entries(beautyModules)
   .map(([path, mod]) => {
-    const name = path.match(/beauty\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+    const name = path.match(/beauty\/(.+)\.png$/)?.[1] ?? "";
+    return {
+      name,
+      url: mod as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Fragrance & Lifestyle — official logos
-const fragranceModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/fragrance/*.png.asset.json",
-  { eager: true },
+// Fragrance & Lifestyle — official logos
+const fragranceModules = import.meta.glob<string>(
+  "../assets/clients/fragrance/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
+
 const FRAGRANCE_LOGOS = Object.entries(fragranceModules)
   .map(([path, mod]) => {
-    const name = path.match(/fragrance\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+    const name = path.match(/fragrance\/(.+)\.png$/)?.[1] ?? "";
+    return {
+      name,
+      url: mod as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
+
 
 // Hospitality & Restaurants — official logos
-const hospitalityModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/hospitality/*.png.asset.json",
-  { eager: true },
+// Hospitality & Restaurants — official logos
+const hospitalityModules = import.meta.glob<string>(
+  "../assets/clients/hospitality/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
+
 const HOSPITALITY_LOGOS = Object.entries(hospitalityModules)
   .map(([path, mod]) => {
-    const name = path.match(/hospitality\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+    const name = path.match(/hospitality\/(.+)\.png$/)?.[1] ?? "";
+    return {
+      name,
+      url: mod as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
+
 
 // Corporate Clients — official logos
-const corporateModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/corporate/*.png.asset.json",
-  { eager: true },
+// Corporate Clients — official logos
+const corporateModules = import.meta.glob<string>(
+  "../assets/clients/corporate/*.png",
+  {
+    eager: true,
+    import: "default",
+  }
 );
+
 const CORPORATE_LOGOS = Object.entries(corporateModules)
   .map(([path, mod]) => {
-    const name = path.match(/corporate\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+    const name = path.match(/corporate\/(.+)\.png$/)?.[1] ?? "";
+    return {
+      name,
+      url: mod as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
-
 
 
 export const Route = createFileRoute("/clients")({
@@ -274,12 +337,13 @@ function ClientsPage() {
             {CLIENT_CATEGORIES.map((category, catIndex) => {
               const categoryLogos = category.logos
                 ? category.logos.map((l, i) => ({ key: l.name, url: l.url, alt: `${category.name} — ${l.name}`, i }))
-                : CLIENT_LOGOS.filter((l) => category.logoIds.includes(l.n)).map((l, i) => ({
-                    key: String(l.n),
-                    url: l.url,
-                    alt: `${category.name} client ${l.n}`,
-                    i,
-                  }));
+                // : CLIENT_LOGOS.filter((l) => category.logoIds.includes(l)).map((l, i) => ({
+                //     key: String(l.name),
+                //     url: l.url,
+                //     alt: `${category.name} client ${l.name}`,
+                //     i,
+                //   }));
+                : [];
               return (
                 <Reveal key={category.name} delay={catIndex * 0.05}>
                   <div>

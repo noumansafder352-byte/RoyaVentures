@@ -44,11 +44,11 @@ export const Route = createFileRoute("/")({
 });
 
 const HERO_SLIDES = [
-  { src: heroKafd.url, alt: "KAFD Riyadh skyline at dusk" },
-  { src: heroKafdResized.url, alt: "King Abdullah Financial District towers at twilight" },
-  { src: heroKingdom.url, alt: "Kingdom Centre tower rising above Riyadh" },
-  { src: heroKingdom2.url, alt: "Kingdom Centre illuminated against the evening sky" },
-  { src: heroRiyadh.url, alt: "Riyadh skyline panorama at sunset" },
+  { src: "/image/KAFD.jpg", alt: "KAFD Riyadh skyline at dusk" },
+  { src: "/image/KAFD-Resized.jpg", alt: "King Abdullah Financial District towers at twilight" },
+  { src: "/image/Kingdom-Center.jpg", alt: "Kingdom Centre tower rising above Riyadh" },
+  { src: "/image/Kingdom-Center_2.jpg", alt: "Kingdom Centre illuminated against the evening sky" },
+  { src: "/image/Riyadh_Skyline.jpg", alt: "Riyadh skyline panorama at sunset" },
 ];
 
 // Featured services on the homepage — first six from the master list
@@ -73,10 +73,10 @@ function getInitials(name: string) {
 }
 
 const TEAM_PREVIEW = [
-  { img: team1.url, name: "Raza Saudagar", role: "Chief Executive" },
-  { img: team2.url, name: "Khazi Zafar", role: "Chief Strategic & Planning" },
-  { img: team4.url, name: "Anas Saudagar", role: "Chief of Operations" },
-  { img: team3.url, name: "Saudagar Naveed", role: "Procurement & Sales" },
+  { img: "/image/Saudagar_Raza_CEO.png", name: "Raza Saudagar", role: "Chief Executive" },
+  { img: "/image/Khazi_Zafar_Chief_Strategic_Planning.jpeg", name: "Khazi Zafar", role: "Chief Strategic & Planning" },
+  { img: "/image/Anas_COO.jpeg", name: "Anas Saudagar", role: "Chief of Operations" },
+  { img: "/image/Soudagar_Naveed_Procurement_Sales1.png", name: "Saudagar Naveed", role: "Procurement & Sales" },
 ];
 
 function HomePage() {

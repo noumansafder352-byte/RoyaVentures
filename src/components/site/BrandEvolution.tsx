@@ -294,7 +294,7 @@ export function BrandEvolution() {
               }}
             >
               <img
-                src={spidernetLogo.url}
+                src="/image/spidernet-logo.png"
                 alt="SpiderNet — former company logo"
                 className="be-logo be-logo-past h-20 w-auto max-w-[260px] object-contain lg:h-24"
                 loading="lazy"
@@ -364,7 +364,7 @@ export function BrandEvolution() {
                 style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 32%, transparent), transparent 65%)" }}
               />
               <img
-                src={royaLogo.url}
+                src="/image/roya-ventures-logo.png"
                 alt="Roya Ventures — new company logo"
                 className="be-logo be-logo-new h-20 w-auto max-w-[280px] object-contain lg:h-24"
                 loading="lazy"

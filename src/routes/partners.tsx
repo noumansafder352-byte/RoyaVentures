@@ -4,20 +4,20 @@ import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import heroImage from "@/assets/hero-clients.jpg";
-import avayaLogo from "@/assets/partners/core/avaya.png.asset.json";
-import ciscoLogo from "@/assets/partners/core/cisco.png.asset.json";
-import hikvisionLogo from "@/assets/partners/core/hikvision.png.asset.json";
-import nexenLogo from "@/assets/partners/core/nexen.png.asset.json";
-import prestigeLogo from "@/assets/partners/core/prestige.png.asset.json";
-import entry2exitLogo from "@/assets/partners/software/entry2exit.png.asset.json";
-import fadelLogo from "@/assets/partners/software/fadel.png.asset.json";
-import odooLogo from "@/assets/partners/software/odoo.png.asset.json";
-import sapaadLogo from "@/assets/partners/software/sapaad.png.asset.json";
-import coramLogo from "@/assets/partners/ai-video/coram.png.asset.json";
-import trassirLogo from "@/assets/partners/ai-video/trassir.png.asset.json";
-import vizo361Logo from "@/assets/partners/ai-video/vizo361.png.asset.json";
-import windroLogo from "@/assets/partners/smart-screens/windro.png.asset.json";
-import zhsunycoLogo from "@/assets/partners/smart-screens/zhsunyco.png.asset.json";
+import avayaLogo from "@/assets/partners/core/avaya.png";
+import ciscoLogo from "@/assets/partners/core/cisco.png";
+import hikvisionLogo from "@/assets/partners/core/hikvision.png";
+import nexenLogo from "@/assets/partners/core/nexen.png";
+import prestigeLogo from "@/assets/partners/core/prestige.png";
+import entry2exitLogo from "@/assets/partners/software/entry2exit.png";
+import fadelLogo from "@/assets/partners/software/fadel.png";
+import odooLogo from "@/assets/partners/software/odoo.png";
+import sapaadLogo from "@/assets/partners/software/sapaad.png";
+import coramLogo from "@/assets/partners/ai-video/coram.png";
+import trassirLogo from "@/assets/partners/ai-video/trassir.png";
+import vizo361Logo from "@/assets/partners/ai-video/vizo361.png";
+import windroLogo from "@/assets/partners/smart-screens/windro.png";
+import zhsunycoLogo from "@/assets/partners/smart-screens/zhsunyco.png";
 
 
 export const Route = createFileRoute("/partners")({
@@ -34,29 +34,29 @@ export const Route = createFileRoute("/partners")({
 
 type PartnerLogo = { name: string; url: string };
 const CORE_TECH_LOGOS: PartnerLogo[] = [
-  { name: "Avaya", url: avayaLogo.url },
-  { name: "Cisco", url: ciscoLogo.url },
-  { name: "Hikvision", url: hikvisionLogo.url },
-  { name: "Nexen Strategy", url: nexenLogo.url },
-  { name: "Prestige Saudi Co. Ltd.", url: prestigeLogo.url },
+  { name: "Avaya", url: avayaLogo },
+  { name: "Cisco", url: ciscoLogo },
+  { name: "Hikvision", url: hikvisionLogo },
+  { name: "Nexen Strategy", url: nexenLogo },
+  { name: "Prestige Saudi Co. Ltd.", url: prestigeLogo },
 ];
 
 const SOFTWARE_LOGOS: PartnerLogo[] = [
-  { name: "Entry2Exit", url: entry2exitLogo.url },
-  { name: "Fadel Software Solutions", url: fadelLogo.url },
-  { name: "Odoo", url: odooLogo.url },
-  { name: "Sapaad", url: sapaadLogo.url },
+  { name: "Entry2Exit", url: entry2exitLogo },
+  { name: "Fadel Software Solutions", url: fadelLogo },
+  { name: "Odoo", url: odooLogo },
+  { name: "Sapaad", url: sapaadLogo },
 ];
 
 const AI_VIDEO_LOGOS: PartnerLogo[] = [
-  { name: "Coram", url: coramLogo.url },
-  { name: "Trassir", url: trassirLogo.url },
-  { name: "Vizo361", url: vizo361Logo.url },
+  { name: "Coram", url: coramLogo },
+  { name: "Trassir", url: trassirLogo },
+  { name: "Vizo361", url: vizo361Logo },
 ];
 
 const SMART_SCREEN_LOGOS: PartnerLogo[] = [
-  { name: "Windro", url: windroLogo.url },
-  { name: "ZhSunyco", url: zhsunycoLogo.url },
+  { name: "Windro", url: windroLogo },
+  { name: "ZhSunyco", url: zhsunycoLogo },
 ];
 
 const PARTNER_CATEGORIES: { name: string; logos?: PartnerLogo[] }[] = [

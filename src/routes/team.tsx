@@ -46,34 +46,34 @@ export const Route = createFileRoute("/team")({
 type Member = { img: string; name: string; role: string; bio?: string };
 
 const CEO: Member = {
-  img: razaImg.url,
+  img: "/image/Saudagar_Raza_CEO.png",
   name: "Raza Saudagar",
   role: "CEO",
   bio: "Sets the strategic direction of Roya Ventures — steering the firm's engineering, technology and infrastructure practice with a founder's discipline and an operator's rigour.",
 };
 
 const STRATEGY_ADMIN: Member[] = [
-  { img: zafarImg.url, name: "Khazi Zafar", role: "Chief Strategic & Planning", bio: "Leads strategic planning and business direction — aligning long-term objectives with operational execution across the group." },
+  { img: "/image/Khazi_Zafar_Chief_Strategic_Planning.jpeg", name: "Khazi Zafar", role: "Chief Strategic & Planning", bio: "Leads strategic planning and business direction — aligning long-term objectives with operational execution across the group." },
   { img: "", name: "Sameena Khazi", role: "HR & Admin", bio: "Oversees people, culture and administrative operations — ensuring the firm runs with care, clarity and operational discipline." },
 ];
 
 const OPERATIONS_FINANCE: Member[] = [
-  { img: anasImg.url, name: "Anas Saudagar", role: "Chief of Operations", bio: "Directs delivery across the project portfolio — accountable for scope, schedule and quality on every engagement." },
-  { img: maqboolImg.url, name: "Maqbool Pasha", role: "Chief Accountant", bio: "Oversees financial controls, reporting and accounting — safeguarding the firm's fiscal integrity and operational transparency." },
+  { img: "/image/Anas_COO.jpeg", name: "Anas Saudagar", role: "Chief of Operations", bio: "Directs delivery across the project portfolio — accountable for scope, schedule and quality on every engagement." },
+  { img: "/image/Maqbool_Pasha_CFO.png", name: "Maqbool Pasha", role: "Chief Accountant", bio: "Oversees financial controls, reporting and accounting — safeguarding the firm's fiscal integrity and operational transparency." },
 ];
 
 const PROCUREMENT_TECHNICAL: Member[] = [
-  { img: naveedImg.url, name: "Saudagar Naveed", role: "Procurement & Sales", bio: "Bridges procurement, sales and client development — bringing technical depth to new opportunities and mandates." },
-  { img: suhailImg.url, name: "Suhail Shaik", role: "Technical Lead", bio: "Leads the technical team on the ground — coordinating design, deployment and commissioning across projects." },
+  { img: "/image/Soudagar_Naveed_Procurement_Sales1.png", name: "Saudagar Naveed", role: "Procurement & Sales", bio: "Bridges procurement, sales and client development — bringing technical depth to new opportunities and mandates." },
+  { img: "/image/Suhail_Team_Leader.png", name: "Suhail Shaik", role: "Technical Lead", bio: "Leads the technical team on the ground — coordinating design, deployment and commissioning across projects." },
 ];
 
 const TECHNICAL_SUPPORT: Member[] = [
-  { img: shuaibImg.url, name: "Mohammed Shoeb", role: "Tech Support Remote", bio: "Provides remote technical support — resolving issues with precision and maintaining client uptime." },
-  { img: imranImg.url, name: "Syed Abdul Razzak Imran", role: "Tech Support Remote", bio: "Delivers remote technical assistance — ensuring systems stay operational and clients receive timely support." },
-  { img: zeeshanImg.url, name: "Zeeshan Islam", role: "Tech Support Remote", bio: "Supports clients and systems remotely — combining technical skill with responsive, clear communication." },
-  { img: furkhanImg.url, name: "Khazi Furkhan", role: "Tech Support", bio: "Executes on-site technical support with a focus on quality workmanship and reliable, standards-based delivery." },
-  { img: faizanImg.url, name: "Khazi Faizan", role: "Tech Support", bio: "Delivers hands-on technical support across IT and ELV systems — from installation through configuration and handover." },
-  { img: mohsinImg.url, name: "Mohsin Mohammed", role: "Sr. Tech Support", bio: "Leads the technical support function — mentoring the team and ensuring complex issues are resolved efficiently." },
+  { img: "/image/Shoaib_Tech_Support_Remote.png", name: "Mohammed Shoeb", role: "Tech Support Remote", bio: "Provides remote technical support — resolving issues with precision and maintaining client uptime." },
+  { img: "/image/Imran_Tech_Support_Remote.png", name: "Syed Abdul Razzak Imran", role: "Tech Support Remote", bio: "Delivers remote technical assistance — ensuring systems stay operational and clients receive timely support." },
+  { img: "/image/Zeeshan_Tech_Support_Remote.png", name: "Zeeshan Islam", role: "Tech Support Remote", bio: "Supports clients and systems remotely — combining technical skill with responsive, clear communication." },
+  { img: "/image/Furkhan_Tech_Support.png", name: "Khazi Furkhan", role: "Tech Support", bio: "Executes on-site technical support with a focus on quality workmanship and reliable, standards-based delivery." },
+  { img: "/image/Faizan_Khazi_Tech_Support.png", name: "Khazi Faizan", role: "Tech Support", bio: "Delivers hands-on technical support across IT and ELV systems — from installation through configuration and handover." },
+  { img: "/image/Mohsin_Sr_Tech_Support.png", name: "Mohsin Mohammed", role: "Sr. Tech Support", bio: "Leads the technical support function — mentoring the team and ensuring complex issues are resolved efficiently." },
 ];
 
 

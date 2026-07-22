@@ -69,16 +69,10 @@ const PROJECTS: Project[] = [
     location: "Jeddah, KSA",
     status: "Successfully Delivered",
     images: [
-      nesmaStreet.url,
-      nesmaCrane.url,
-      nesmaCrew.url,
-      nesmaInspection.url,
-    ],
-    galleryImages: [
-      img("photo-1581093588401-fbb62a02f120"),
-      img("photo-1565043666747-69f6646db940"),
-      img("photo-1504917595217-d4dc5ebe6122"),
-      img("photo-1591696205602-2f950c417cb9"),
+      "/image/nesma-street.jpg",
+      "/image/nesma-crane.jpg",
+      "/image/nesma-crew.jpg",
+      "/image/nesma-inspection.png",
     ],
   },
   {
@@ -97,10 +91,10 @@ const PROJECTS: Project[] = [
     location: "Kingdom of Saudi Arabia (KSA)",
     status: "Successfully Delivered",
     images: [
-      dominosHikvision.url,
-      dominosCeiling.url,
-      dominosLadder.url,
-      dominosCashier.url,
+      "/image/dominos-hikvision.jpg",
+      "/image/dominos-ceiling.jpg",
+      "/image/dominos-ladder.jpg",
+      "/image/dominos-cashier.jpg",
     ],
   },
 ];
