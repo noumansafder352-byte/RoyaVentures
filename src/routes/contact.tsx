@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
-import { Mail, MapPin, Send, Check } from "lucide-react";
+import { Mail, MapPin, Send, Check, Loader2 } from "lucide-react";
 import heroContact from "@/assets/hero-contact.jpg";
 
 export const Route = createFileRoute("/contact")({
@@ -35,7 +35,7 @@ const DIRECTORY: { name: string; phone?: string; email: string }[] = [
 ];
 
 function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "error">("idle");
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,20 +43,24 @@ function ContactPage() {
     const formData = new FormData(form);
     formData.append("access_key", "6142bc91-734e-4321-b2b1-d4232f7b81e1");
 
+    setStatus("submitting");
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
+        headers: { Accept: "application/json" },
         body: formData,
       });
       const data = await response.json();
 
       if (data.success) {
-        setSent(true);
+        setStatus("sent");
         form.reset();
-        setTimeout(() => setSent(false), 4500);
+        setTimeout(() => setStatus("idle"), 4500);
+      } else {
+        setStatus("error");
       }
     } catch {
-      setSent(false);
+      setStatus("error");
     }
   };
 
@@ -124,16 +128,22 @@ function ContactPage() {
                         className="w-full rounded-xl border border-[color-mix(in_oklab,var(--navy)_12%,transparent)] bg-[var(--ivory)]/40 px-4 py-3.5 text-[15px] text-[var(--navy)] placeholder:text-muted-foreground/60 transition-all duration-300 hover:border-[color-mix(in_oklab,var(--navy)_22%,transparent)] focus:border-[var(--gold)] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[var(--gold)]/10 resize-none"
                       />
                     </div>
-                    <div className="pt-3 flex items-center gap-5">
+                    <div className="pt-3 flex flex-wrap items-center gap-x-5 gap-y-3">
                       <button
                         type="submit"
+                        disabled={status === "submitting"}
                         data-cursor="hover"
-                        className="group inline-flex items-center gap-3 rounded-full bg-[var(--gold)] text-[var(--navy)] px-9 py-4 text-[13px] font-bold uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[var(--navy)] hover:text-white shadow-[0_15px_40px_-15px_color-mix(in_oklab,var(--gold)_60%,transparent)] hover:shadow-[0_18px_45px_-12px_color-mix(in_oklab,var(--navy)_50%,transparent)] hover:-translate-y-2"
+                        className="group inline-flex items-center gap-3 rounded-full bg-[var(--gold)] text-[var(--navy)] px-9 py-4 text-[13px] font-bold uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[var(--navy)] hover:text-white shadow-[0_15px_40px_-15px_color-mix(in_oklab,var(--gold)_60%,transparent)] hover:shadow-[0_18px_45px_-12px_color-mix(in_oklab,var(--navy)_50%,transparent)] hover:-translate-y-2 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:bg-[var(--gold)] disabled:hover:text-[var(--navy)]"
                       >
-                        {sent ? (
+                        {status === "sent" ? (
                           <>
                             Message sent{" "}
                             <Check className="h-4 w-4 transition-transform duration-500 group-hover:scale-110" />
+                          </>
+                        ) : status === "submitting" ? (
+                          <>
+                            Sending…{" "}
+                            <Loader2 className="h-4 w-4 animate-spin" />
                           </>
                         ) : (
                           <>
@@ -142,9 +152,19 @@ function ContactPage() {
                           </>
                         )}
                       </button>
-                      <p className="text-xs text-muted-foreground tracking-wide hidden sm:block">
-                        Treated in strict confidence.
-                      </p>
+                      {status === "error" ? (
+                        <p className="text-xs text-red-600 tracking-wide">
+                          Something went wrong — please try again, or email us directly at{" "}
+                          <a href="mailto:info@royaventure.com" className="underline">
+                            info@royaventure.com
+                          </a>
+                          .
+                        </p>
+                      ) : (
+                        <p className="text-xs text-muted-foreground tracking-wide hidden sm:block">
+                          Treated in strict confidence.
+                        </p>
+                      )}
                     </div>
                   </form>
                 </div>
