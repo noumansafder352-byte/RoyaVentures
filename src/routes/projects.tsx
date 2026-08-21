@@ -28,58 +28,58 @@ import {
   Factory,
   Hotel,
 } from "lucide-react";
-import nesmaCrew from "@/assets/projects/nesma/nesma-crew.jpg.asset.json";
-import nesmaCrane from "@/assets/projects/nesma/nesma-crane.jpg.asset.json";
-import nesmaInspection from "@/assets/projects/nesma/nesma-inspection.png.asset.json";
-import nesmaStreet from "@/assets/projects/nesma/nesma-street.jpg.asset.json";
-import dominosHikvision from "@/assets/projects/dominos/dominos-hikvision.jpg.asset.json";
-import dominosCashier from "@/assets/projects/dominos/dominos-cashier.jpg.asset.json";
-import dominosCeiling from "@/assets/projects/dominos/dominos-ceiling.jpg.asset.json";
-import dominosLadder from "@/assets/projects/dominos/dominos-ladder.jpg.asset.json";
-import sephoraOlaya from "@/assets/projects/sephora/Sephora_Olaya.webp.asset.json";
-import sephoraKingdom from "@/assets/projects/sephora/Sephohra_Kingdom.webp.asset.json";
-import sephoraApWork from "@/assets/projects/sephora/Sephora_Store_AP_Work2.jpg.asset.json";
-import sephoraUWalk from "@/assets/projects/sephora/U_Walk_Sephora_CCTV_Work.webp.asset.json";
-import sephoraMeetingRoom from "@/assets/projects/sephora/P1.jpg.asset.json";
-import nujaimaChanel from "@/assets/projects/nujaima/chanel-cctv-lan.webp.asset.json";
-import nujaimaDataCentre from "@/assets/projects/nujaima/data-centre.jpeg.asset.json";
-import nujaimaCabling from "@/assets/projects/nujaima/network-cable-labeling.jpg.asset.json";
-import nujaimaSolitaire from "@/assets/projects/nujaima/chanel-solitaire.jpeg.asset.json";
-import nujaimaRack1 from "@/assets/projects/nujaima/P3.jpg.asset.json";
-import nujaimaRack2 from "@/assets/projects/nujaima/P3.1.jpg.asset.json";
-import nujaimaRack3 from "@/assets/projects/nujaima/P3.2.jpg.asset.json";
-import chalhoubCabling from "@/assets/projects/chalhoub/cable-pulling.jpg.asset.json";
-import chalhoubDatacenter from "@/assets/projects/chalhoub/datacenter.jpg.asset.json";
-import chalhoubElv from "@/assets/projects/chalhoub/elv-system.webp.asset.json";
-import chalhoubTesting from "@/assets/projects/chalhoub/testing.jpg.asset.json";
-import chRetailJimmy from "@/assets/projects/chalhoub-retail/jimmy-choo.webp.asset.json";
-import chRetailPrada from "@/assets/projects/chalhoub-retail/prada.webp.asset.json";
-import chRetailSwarovski from "@/assets/projects/chalhoub-retail/swarovski.jpg.asset.json";
-import chRetailTomFord from "@/assets/projects/chalhoub-retail/tom-ford.jpg.asset.json";
-import chRetailMichaelKors from "@/assets/projects/chalhoub-retail/michael-kors.jpg.asset.json";
-import chRetailFaces from "@/assets/projects/chalhoub-retail/faces.jpg.asset.json";
-import chRetailTumi from "@/assets/projects/chalhoub-retail/tumi.jpg.asset.json";
-import chRetailLoccitane from "@/assets/projects/chalhoub-retail/loccitane.jpg.asset.json";
-import chRetailLacoste from "@/assets/projects/chalhoub-retail/lacoste.jpg.asset.json";
-import chRetailLacoste2 from "@/assets/projects/chalhoub-retail/lacoste-2.png.asset.json";
-import chRetailLacoste3 from "@/assets/projects/chalhoub-retail/lacoste-3.jpg.asset.json";
-import chRetailSwarovskiStore from "@/assets/projects/chalhoub-retail/swarovski-store.jpg.asset.json";
-import chRetailLoccitane2 from "@/assets/projects/chalhoub-retail/loccitane-2.jpg.asset.json";
-import warehouseRacking from "@/assets/projects/warehouse/warehouse-racking.jpg.asset.json";
-import warehouseCctv from "@/assets/projects/warehouse/warehouse-cctv.jpg.asset.json";
-import warehouseDatacenter from "@/assets/projects/warehouse/warehouse-datacenter.jpg.asset.json";
-import warehouseCabling from "@/assets/projects/warehouse/warehouse-cabling.jpg.asset.json";
-import cafeBateel from "@/assets/projects/cafe/bateel-solitaire.jpg.asset.json";
-import cafeJoeJuiceInterior from "@/assets/projects/cafe/joe-juice-interior.webp.asset.json";
-import cafeNew1 from "@/assets/projects/cafe/cafe-new-1.jpg.asset.json";
-import cafeNew2 from "@/assets/projects/cafe/cafe-new-2.jpg.asset.json";
-import cafeNew3 from "@/assets/projects/cafe/cafe-new-3.jpg.asset.json";
-import cafeNew4 from "@/assets/projects/cafe/cafe-new-4.jpg.asset.json";
-import cafeNew5 from "@/assets/projects/cafe/cafe-new-5.png.asset.json";
-import cafeNew6 from "@/assets/projects/cafe/cafe-new-6.png.asset.json";
+import nesmaCrew from "@/assets/projects/nesma/nesma-crew.png";
+import nesmaCrane from "@/assets/projects/nesma/nesma-crane.png";
+import nesmaInspection from "@/assets/projects/nesma/nesma-inspection.png";
+import nesmaStreet from "@/assets/projects/nesma/nesma-street.png";
+import dominosHikvision from "@/assets/projects/dominos/dominos-hikvision.png";
+import dominosCashier from "@/assets/projects/dominos/dominos-cashier.png";
+import dominosCeiling from "@/assets/projects/dominos/dominos-ceiling.png";
+import dominosLadder from "@/assets/projects/dominos/dominos-ladder.png";
+import sephoraOlaya from "@/assets/projects/sephora/Sephora_Olaya.png";
+import sephoraKingdom from "@/assets/projects/sephora/Sephohra_Kingdom.png";
+import sephoraApWork from "@/assets/projects/sephora/Sephora_Store_AP_Work2.png";
+import sephoraUWalk from "@/assets/projects/sephora/U_Walk_Sephora_CCTV_Work.png";
+import sephoraMeetingRoom from "@/assets/projects/sephora/sephora-meeting-room.png";
+import nujaimaChanel from "@/assets/projects/nujaima/chanel-cctv-lan.png";
+import nujaimaDataCentre from "@/assets/projects/nujaima/data-centre.png";
+import nujaimaCabling from "@/assets/projects/nujaima/network-cable-labeling.png";
+import nujaimaSolitaire from "@/assets/projects/nujaima/chanel-solitaire.png";
+import nujaimaRack1 from "@/assets/projects/nujaima/g1.png";
+import nujaimaRack2 from "@/assets/projects/nujaima/g2.png";
+import nujaimaRack3 from "@/assets/projects/nujaima/g3.png";
+import chalhoubCabling from "@/assets/projects/chalhoub/cable-pulling.png";
+import chalhoubDatacenter from "@/assets/projects/chalhoub/datacenter.png";
+import chalhoubElv from "@/assets/projects/chalhoub/elv-system.png";
+import chalhoubTesting from "@/assets/projects/chalhoub/testing.png";
+import chRetailJimmy from "@/assets/projects/chalhoub-retail/jimmy-choo.png";
+import chRetailPrada from "@/assets/projects/chalhoub-retail/prada.png";
+import chRetailSwarovski from "@/assets/projects/chalhoub-retail/swarovski.png";
+import chRetailTomFord from "@/assets/projects/chalhoub-retail/tom-ford.png";
+import chRetailMichaelKors from "@/assets/projects/chalhoub-retail/michael-kors.png";
+import chRetailFaces from "@/assets/projects/chalhoub-retail/faces.png";
+import chRetailTumi from "@/assets/projects/chalhoub-retail/tumi.png";
+import chRetailLoccitane from "@/assets/projects/chalhoub-retail/loccitane.png";
+import chRetailLacoste from "@/assets/projects/chalhoub-retail/lacoste.png";
+import chRetailLacoste2 from "@/assets/projects/chalhoub-retail/lacoste-2.png";
+import chRetailLacoste3 from "@/assets/projects/chalhoub-retail/lacoste-3.png";
+import chRetailSwarovskiStore from "@/assets/projects/chalhoub-retail/swarovski-store.png";
+import chRetailLoccitane2 from "@/assets/projects/chalhoub-retail/loccitane-2.png";
+import warehouseRacking from "@/assets/projects/warehouse/warehouse-racking.png";
+import warehouseCctv from "@/assets/projects/warehouse/warehouse-cctv.png";
+import warehouseDatacenter from "@/assets/projects/warehouse/warehouse-datacenter.png";
+import warehouseCabling from "@/assets/projects/warehouse/warehouse-cabling.png";
+import cafeBateel from "@/assets/projects/cafe/bateel-solitaire.png";
+import cafeNew1 from "@/assets/projects/cafe/cafe-new-1.png";
+import cafeNew2 from "@/assets/projects/cafe/cafe-new-2.png";
+import cafeNew3 from "@/assets/projects/cafe/cafe-new-3.png";
+import cafeNew4 from "@/assets/projects/cafe/cafe-new-4.png";
+import cafeNew5 from "@/assets/projects/cafe/cafe-new-5.png";
+import cafeNew6 from "@/assets/projects/cafe/cafe-new-6.png";
 
 // Royalty-free placeholder imagery (Unsplash) — replace later with official project photos.
-const img = (id: string, w = 1600) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+const img = (id: string, w = 1600) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 const HERO_IMAGE = img("photo-1581091226825-a6a2a5aee158");
 
@@ -114,8 +114,8 @@ const PROJECTS: Project[] = [
     category: "Retail IT & Security",
     location: "Across Saudi Arabia",
     status: "On-Going",
-    images: [sephoraMeetingRoom.url, sephoraKingdom.url, sephoraApWork.url, sephoraUWalk.url],
-    galleryImages: [sephoraMeetingRoom.url, sephoraOlaya.url, sephoraKingdom.url, sephoraApWork.url, sephoraUWalk.url],
+    images: [sephoraMeetingRoom, sephoraKingdom, sephoraApWork, sephoraUWalk],
+    galleryImages: [sephoraMeetingRoom, sephoraOlaya, sephoraKingdom, sephoraApWork, sephoraUWalk],
   },
   {
     company: "Domino's Pizza CCTV System Upgrade",
@@ -132,7 +132,7 @@ const PROJECTS: Project[] = [
     category: "Retail Surveillance",
     location: "Kingdom of Saudi Arabia (KSA)",
     status: "Successfully Delivered",
-    images: [dominosHikvision.url, dominosCeiling.url, dominosLadder.url, dominosCashier.url],
+    images: [dominosHikvision, dominosCeiling, dominosLadder, dominosCashier],
   },
   {
     company: "Enterprise Data Center & Retail IT Infrastructure — Al Nujaima Trading Co.",
@@ -150,15 +150,15 @@ const PROJECTS: Project[] = [
     category: "Enterprise IT Infrastructure",
     location: "Riyadh, Saudi Arabia",
     status: "Completed",
-    images: [nujaimaChanel.url, nujaimaDataCentre.url, nujaimaCabling.url, nujaimaSolitaire.url],
+    images: [nujaimaChanel, nujaimaDataCentre, nujaimaCabling, nujaimaSolitaire],
     galleryImages: [
-      nujaimaChanel.url,
-      nujaimaDataCentre.url,
-      nujaimaCabling.url,
-      nujaimaSolitaire.url,
-      nujaimaRack1.url,
-      nujaimaRack2.url,
-      nujaimaRack3.url,
+      nujaimaChanel,
+      nujaimaDataCentre,
+      nujaimaCabling,
+      nujaimaSolitaire,
+      nujaimaRack1,
+      nujaimaRack2,
+      nujaimaRack3,
     ],
   },
   {
@@ -179,7 +179,7 @@ const PROJECTS: Project[] = [
     location: "Riyadh & Jeddah, Saudi Arabia",
     status: "Completed",
 
-    images: [chalhoubDatacenter.url, chalhoubElv.url, chalhoubCabling.url, chalhoubTesting.url],
+    images: [chalhoubDatacenter, chalhoubElv, chalhoubCabling, chalhoubTesting],
   },
   {
     company: "Retail IT Infrastructure — Chalhoub Group",
@@ -197,21 +197,21 @@ const PROJECTS: Project[] = [
     category: "Retail IT Infrastructure",
     location: "Across Saudi Arabia",
     status: "Completed",
-    images: [chRetailSwarovski.url, chRetailTomFord.url, chRetailJimmy.url, chRetailPrada.url],
+    images: [chRetailSwarovski, chRetailTomFord, chRetailJimmy, chRetailPrada],
     galleryImages: [
-      chRetailSwarovski.url,
-      chRetailTomFord.url,
-      chRetailJimmy.url,
-      chRetailPrada.url,
-      chRetailMichaelKors.url,
-      chRetailFaces.url,
-      chRetailTumi.url,
-      chRetailLoccitane.url,
-      chRetailLacoste.url,
-      chRetailLacoste2.url,
-      chRetailLacoste3.url,
-      chRetailSwarovskiStore.url,
-      chRetailLoccitane2.url,
+      chRetailSwarovski,
+      chRetailTomFord,
+      chRetailJimmy,
+      chRetailPrada,
+      chRetailMichaelKors,
+      chRetailFaces,
+      chRetailTumi,
+      chRetailLoccitane,
+      chRetailLacoste,
+      chRetailLacoste2,
+      chRetailLacoste3,
+      chRetailSwarovskiStore,
+      chRetailLoccitane2,
     ],
   },
   {
@@ -230,7 +230,7 @@ const PROJECTS: Project[] = [
     category: "Warehouse Surveillance & Networking",
     location: "Riyadh & Jeddah, Saudi Arabia",
     status: "Completed",
-    images: [warehouseRacking.url, warehouseCctv.url, warehouseDatacenter.url, warehouseCabling.url],
+    images: [warehouseRacking, warehouseCctv, warehouseDatacenter, warehouseCabling],
   },
   {
     company: "Restaurant’s Security & IT Infrastructure -Bateel Café, Charcoza & Dominos",
@@ -248,17 +248,8 @@ const PROJECTS: Project[] = [
     category: "Café Security & IT Infrastructure",
     location: "Riyadh, Saudi Arabia",
     status: "Completed",
-    images: [cafeNew1.url, cafeBateel.url, cafeJoeJuiceInterior.url, cafeNew3.url],
-    galleryImages: [
-      cafeBateel.url,
-      cafeJoeJuiceInterior.url,
-      cafeNew1.url,
-      cafeNew2.url,
-      cafeNew3.url,
-      cafeNew4.url,
-      cafeNew5.url,
-      cafeNew6.url,
-    ],
+    images: [cafeNew1, cafeBateel, cafeNew5, cafeNew3],
+    galleryImages: [cafeBateel, cafeNew1, cafeNew2, cafeNew3, cafeNew4, cafeNew5, cafeNew6],
   },
   {
     company: "Nesma LED Lighting Project",
@@ -275,7 +266,7 @@ const PROJECTS: Project[] = [
     category: "Government Infrastructure",
     location: "Jeddah, KSA",
     status: "Successfully Delivered",
-    images: [nesmaStreet.url, nesmaCrane.url, nesmaCrew.url, nesmaInspection.url],
+    images: [nesmaStreet, nesmaCrane, nesmaCrew, nesmaInspection],
   },
 ];
 
@@ -361,7 +352,8 @@ function Gallery({ project, onOpen }: { project: Project; onOpen: (index: number
 
   const tileBase =
     "group relative overflow-hidden rounded-2xl shadow-[var(--shadow-card)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]";
-  const imgBase = "h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]";
+  const imgBase =
+    "h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]";
 
   return (
     <div className="relative before:absolute before:-inset-3 md:before:-inset-4 before:rounded-[1.75rem] before:border before:border-[var(--gold)]/25 before:-z-10">
@@ -436,7 +428,9 @@ function ProjectBlock({ project, index }: { project: Project; index: number }) {
         </p>
         <h3 className="heading-md mt-6 text-[var(--navy)]">{project.company}</h3>
         <div className="mt-5 gold-divider" />
-        <p className="mt-6 text-base md:text-lg leading-relaxed text-muted-foreground font-light">{project.overview}</p>
+        <p className="mt-6 text-base md:text-lg leading-relaxed text-muted-foreground font-light">
+          {project.overview}
+        </p>
 
         <div className="mt-8">
           <p className="text-[11px] tracking-[0.28em] uppercase text-[var(--navy)]/60 font-semibold">
@@ -571,26 +565,31 @@ function ProjectsPage() {
             <Reveal>
               <p className="gold-rule">Our track record</p>
               <h2 className="heading-sub-lg mt-6">
-                Proven delivery <em className="not-italic text-[var(--gold)]">across every project.</em>
+                Proven delivery{" "}
+                <em className="not-italic text-[var(--gold)]">across every project.</em>
               </h2>
               <div className="mt-8 gold-divider" />
             </Reveal>
           </div>
           <Reveal as="div" delay={0.1} className="lg:col-span-7 space-y-7">
             <p className="text-base text-muted-foreground leading-relaxed">
-              Every project reflects our commitment to quality, precision, safety and long-term client success.
+              Every project reflects our commitment to quality, precision, safety and long-term
+              client success.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed">
-              From electrical infrastructure and data centres to ELV systems and enterprise IT solutions, Roya Ventures
-              delivers projects that create lasting value — engineered by senior practitioners, supported well beyond
-              handover.
+              From electrical infrastructure and data centres to ELV systems and enterprise IT
+              solutions, Roya Ventures delivers projects that create lasting value — engineered by
+              senior practitioners, supported well beyond handover.
             </p>
           </Reveal>
         </div>
       </section>
 
       {/* Featured Projects Showcase */}
-      <section className="relative section-y overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
+      <section
+        className="relative section-y overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/50 to-transparent"
@@ -600,7 +599,8 @@ function ProjectsPage() {
             eyebrow="Featured projects"
             title={
               <>
-                Engineering delivered <em className="not-italic text-[var(--gold)]">at every scale.</em>
+                Engineering delivered{" "}
+                <em className="not-italic text-[var(--gold)]">at every scale.</em>
               </>
             }
             description="A selection of mandates across infrastructure, technology and integrated systems."
@@ -658,7 +658,8 @@ function ProjectsPage() {
             eyebrow="Why clients choose us"
             title={
               <>
-                The reasons organisations <em className="not-italic text-[var(--gold)]">trust Roya Ventures.</em>
+                The reasons organisations{" "}
+                <em className="not-italic text-[var(--gold)]">trust Roya Ventures.</em>
               </>
             }
             description="Six commitments that define how we work — and why clients return, project after project."
@@ -707,7 +708,9 @@ function ProjectsPage() {
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-[var(--gold)]/40 bg-[var(--gold)]/10 text-[var(--emerald-deep)] transition-all duration-500 group-hover:bg-[var(--gold)] group-hover:text-white group-hover:-rotate-6">
                     <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mt-6 text-base font-semibold tracking-tight text-[var(--navy)]">{name}</h3>
+                  <h3 className="mt-6 text-base font-semibold tracking-tight text-[var(--navy)]">
+                    {name}
+                  </h3>
                   <div className="mt-4 mx-auto gold-divider" />
                 </div>
               </Reveal>

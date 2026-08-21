@@ -31,11 +31,11 @@ import { BrandEvolution } from "@/components/site/BrandEvolution";
 import { Reveal } from "@/components/site/Reveal";
 import { SERVICES } from "@/lib/services-data";
 import heroTech2 from "@/assets/hero-tech-2.jpg";
-import heroKafd from "@/assets/hero/KAFD.jpg.asset.json";
-import heroKafdResized from "@/assets/hero/KAFD-Resized.jpg.asset.json";
-import heroKingdom from "@/assets/hero/Kingdom-Center.jpg.asset.json";
-import heroKingdom2 from "@/assets/hero/Kingdom-Center_2.jpg.asset.json";
-import heroRiyadh from "@/assets/hero/Riyadh_Skyline.jpg.asset.json";
+import heroKafd from "@/assets/hero/KAFD.jpg";
+import heroKafdResized from "@/assets/hero/KAFD-Resized.jpg";
+import heroKingdom from "@/assets/hero/Kingdom-Center.jpg";
+import heroKingdom2 from "@/assets/hero/Kingdom-Center_2.jpg";
+import heroRiyadh from "@/assets/hero/Riyadh_Skyline.jpg";
 import svcDatacenter from "@/assets/svc-datacenter.jpg";
 import svcNetworking from "@/assets/svc-networking.jpg";
 import svcFiber from "@/assets/svc-fiber.jpg";
@@ -44,10 +44,10 @@ import svcSurveillance from "@/assets/svc-surveillance.jpg";
 import svcFirefighting from "@/assets/svc-firefighting.jpg";
 import svcElectrical from "@/assets/svc-electrical.jpg";
 import svcIt from "@/assets/svc-it.jpg";
-import team1 from "@/assets/team/Saudagar_Raza_CEO.png.asset.json";
-import team2 from "@/assets/team/Khazi_Zafar_Chief_Strategic_Planning.jpeg.asset.json";
-import team3 from "@/assets/team/Soudagar_Naveed_Procurement_Sales1.png.asset.json";
-import team4 from "@/assets/team/Anas_COO.jpeg.asset.json";
+import team1 from "@/assets/team/Saudagar_Raza_CEO.png";
+import team2 from "@/assets/team/Khazi_Zafar_Chief_Strategic_Planning.jpeg";
+import team3 from "@/assets/team/Soudagar_Naveed_Procurement_Sales1.png";
+import team4 from "@/assets/team/Anas_COO.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,7 +61,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Roya Ventures — Technology Infrastructure & Engineering" },
       {
         property: "og:description",
-        content: "Data centers, networks, surveillance, electrical, fire protection and IT — engineered end to end.",
+        content:
+          "Data centers, networks, surveillance, electrical, fire protection and IT — engineered end to end.",
       },
     ],
   }),
@@ -69,11 +70,11 @@ export const Route = createFileRoute("/")({
 });
 
 const HERO_SLIDES = [
-  { src: heroKafd.url, alt: "KAFD Riyadh skyline at dusk" },
-  { src: heroKafdResized.url, alt: "King Abdullah Financial District towers at twilight" },
-  { src: heroKingdom.url, alt: "Kingdom Centre tower rising above Riyadh" },
-  { src: heroKingdom2.url, alt: "Kingdom Centre illuminated against the evening sky" },
-  { src: heroRiyadh.url, alt: "Riyadh skyline panorama at sunset" },
+  { src: heroKafd, alt: "KAFD Riyadh skyline at dusk" },
+  { src: heroKafdResized, alt: "King Abdullah Financial District towers at twilight" },
+  { src: heroKingdom, alt: "Kingdom Centre tower rising above Riyadh" },
+  { src: heroKingdom2, alt: "Kingdom Centre illuminated against the evening sky" },
+  { src: heroRiyadh, alt: "Riyadh skyline panorama at sunset" },
 ];
 
 // Featured services on the homepage — first six from the master list
@@ -122,10 +123,10 @@ function getInitials(name: string) {
 }
 
 const TEAM_PREVIEW = [
-  { img: team1.url, name: "Raza Saudagar", role: "Chief Executive" },
-  { img: team2.url, name: "Khazi Zafar", role: "Chief Strategic & Planning" },
-  { img: team4.url, name: "Anas Saudagar", role: "Chief of Operations" },
-  { img: team3.url, name: "Saudagar Naveed", role: "Procurement & Sales" },
+  { img: team1, name: "Raza Saudagar", role: "Chief Executive" },
+  { img: team2, name: "Khazi Zafar", role: "Chief Strategic & Planning" },
+  { img: team4, name: "Anas Saudagar", role: "Chief of Operations" },
+  { img: team3, name: "Saudagar Naveed", role: "Procurement & Sales" },
 ];
 
 function HomePage() {
@@ -154,14 +155,15 @@ function HomePage() {
               Roya Ventures
             </p>
             <h1 className="heading-xl mt-8 text-white reveal" style={{ animationDelay: "0.15s" }}>
-              Technology infrastructure, <span className="text-[var(--gold)]">engineered end to end.</span>
+              Technology infrastructure,{" "}
+              <span className="text-[var(--gold)]">engineered end to end.</span>
             </h1>
             <p
               className="mt-10 max-w-2xl text-lg md:text-xl leading-relaxed text-white/90 reveal font-light"
               style={{ animationDelay: "0.3s" }}
             >
-              From data centers and enterprise networks to surveillance, electrical and IT systems — we design, build
-              and support the systems that keep modern enterprises running.
+              From data centers and enterprise networks to surveillance, electrical and IT systems —
+              we design, build and support the systems that keep modern enterprises running.
             </p>
             <div className="mt-12 flex flex-wrap gap-5 reveal" style={{ animationDelay: "0.45s" }}>
               <Link to="/services" className="btn-primary btn-on-dark" data-cursor="hover">
@@ -220,7 +222,9 @@ function HomePage() {
                       <div className="font-display text-3xl font-semibold text-[var(--navy)] tracking-[-0.03em]">
                         {s.k}
                       </div>
-                      <div className="mt-1 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">{s.v}</div>
+                      <div className="mt-1 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+                        {s.v}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -229,14 +233,15 @@ function HomePage() {
             <div className="lg:col-span-7 lg:pt-12">
               <Reveal delay={0.1}>
                 <p className="text-base md:text-[17px] leading-[1.85] text-muted-foreground text-left md:text-justify hyphens-auto">
-                  Roya Ventures is a multidisciplinary technology and engineering solutions firm — delivering data
-                  centers, networks, security, electrical and IT infrastructure under a single, accountable mandate.
+                  Roya Ventures is a multidisciplinary technology and engineering solutions firm —
+                  delivering data centers, networks, security, electrical and IT infrastructure
+                  under a single, accountable mandate.
                 </p>
                 <p className="mt-8 text-base md:text-[17px] leading-[1.85] text-muted-foreground text-left md:text-justify hyphens-auto">
-                  We work with enterprises, retailers, public institutions and developers to plan, deploy and operate
-                  the physical and digital systems modern operations depend on. Every engagement is delivered by senior
-                  engineers with full ownership of the outcome — from initial design through commissioning and long-term
-                  support.
+                  We work with enterprises, retailers, public institutions and developers to plan,
+                  deploy and operate the physical and digital systems modern operations depend on.
+                  Every engagement is delivered by senior engineers with full ownership of the
+                  outcome — from initial design through commissioning and long-term support.
                 </p>
                 <div className="mt-12 flex flex-wrap gap-4">
                   <Link to="/about" className="btn-ghost" data-cursor="hover">
@@ -271,8 +276,8 @@ function HomePage() {
             <Reveal className="max-w-2xl">
               <p className="gold-rule text-[var(--gold)]">Engineering discipline</p>
               <p className="mt-6 md:mt-8 font-display text-xl sm:text-2xl md:text-5xl font-light leading-[1.25] md:leading-[1.15] tracking-[-0.025em] text-white">
-                "We measure success in uptime, response time and the silence of systems that just work — long after our
-                engineers have left the site."
+                "We measure success in uptime, response time and the silence of systems that just
+                work — long after our engineers have left the site."
               </p>
               <div className="mt-8 md:mt-10 flex items-center gap-4 md:gap-5">
                 <div className="h-px w-12 md:w-16 bg-[var(--gold)] shrink-0" />
@@ -286,8 +291,14 @@ function HomePage() {
       </section>
 
       {/* Capabilities — dark plaque, editorial capability manifesto */}
-      <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-60" />
+      <section
+        className="section-y relative overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-60"
+        />
         <div className="container-px mx-auto">
           <div
             className="relative isolate overflow-hidden rounded-[2rem] bg-noise text-white shadow-[0_50px_120px_-40px_rgba(14,36,64,0.55)]"
@@ -302,10 +313,22 @@ function HomePage() {
               <div className="absolute top-16 right-16 h-28 w-28 rounded-full border border-[var(--gold)]/10" />
             </div>
             {/* Gold hairline corner accents */}
-            <span aria-hidden className="absolute top-6 left-6 h-6 w-6 border-t border-l border-[var(--gold)]/70" />
-            <span aria-hidden className="absolute top-6 right-6 h-6 w-6 border-t border-r border-[var(--gold)]/70" />
-            <span aria-hidden className="absolute bottom-6 left-6 h-6 w-6 border-b border-l border-[var(--gold)]/70" />
-            <span aria-hidden className="absolute bottom-6 right-6 h-6 w-6 border-b border-r border-[var(--gold)]/70" />
+            <span
+              aria-hidden
+              className="absolute top-6 left-6 h-6 w-6 border-t border-l border-[var(--gold)]/70"
+            />
+            <span
+              aria-hidden
+              className="absolute top-6 right-6 h-6 w-6 border-t border-r border-[var(--gold)]/70"
+            />
+            <span
+              aria-hidden
+              className="absolute bottom-6 left-6 h-6 w-6 border-b border-l border-[var(--gold)]/70"
+            />
+            <span
+              aria-hidden
+              className="absolute bottom-6 right-6 h-6 w-6 border-b border-r border-[var(--gold)]/70"
+            />
 
             <div className="grid gap-14 lg:grid-cols-12 lg:gap-16 p-8 md:p-14 lg:p-20">
               {/* Left — manifesto */}
@@ -313,22 +336,26 @@ function HomePage() {
                 <Reveal>
                   <p className="gold-rule text-[var(--gold)]">Capabilities</p>
                   <h2 className="heading-lg mt-8 text-white leading-[1.05]">
-                    Why enterprises choose <em className="not-italic text-[var(--gold)]">Roya Ventures.</em>
+                    Why enterprises choose{" "}
+                    <em className="not-italic text-[var(--gold)]">Roya Ventures.</em>
                   </h2>
                   <div className="mt-8 h-px w-16 bg-[var(--gold)]" />
                   <p className="mt-8 text-[17px] leading-[1.85] text-white/75 font-light">
-                    Beyond the disciplines we practice, our value is in how we execute — with senior ownership,
-                    engineering rigour and a long-term commitment to the systems we deliver.
+                    Beyond the disciplines we practice, our value is in how we execute — with senior
+                    ownership, engineering rigour and a long-term commitment to the systems we
+                    deliver.
                   </p>
                   <div className="mt-10 flex flex-wrap gap-3">
-                    {["Senior-led", "Standards-driven", "Vendor-neutral", "Lifecycle support"].map((t) => (
-                      <span
-                        key={t}
-                        className="text-[11px] tracking-[0.22em] uppercase px-3.5 py-2 rounded-full border border-[var(--gold)]/30 bg-white/[0.03] text-white/80"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    {["Senior-led", "Standards-driven", "Vendor-neutral", "Lifecycle support"].map(
+                      (t) => (
+                        <span
+                          key={t}
+                          className="text-[11px] tracking-[0.22em] uppercase px-3.5 py-2 rounded-full border border-[var(--gold)]/30 bg-white/[0.03] text-white/80"
+                        >
+                          {t}
+                        </span>
+                      ),
+                    )}
                   </div>
                 </Reveal>
               </div>
@@ -359,7 +386,9 @@ function HomePage() {
                                 {name}
                               </h3>
                             </div>
-                            <p className="mt-2 text-[13px] leading-[1.7] text-white/65 font-light">{desc}</p>
+                            <p className="mt-2 text-[13px] leading-[1.7] text-white/65 font-light">
+                              {desc}
+                            </p>
                           </div>
                         </div>
                       </li>
@@ -392,7 +421,8 @@ function HomePage() {
               eyebrow="By the numbers"
               title={
                 <>
-                  Infrastructure delivered with <em className="not-italic text-[var(--gold)]">measurable rigour.</em>
+                  Infrastructure delivered with{" "}
+                  <em className="not-italic text-[var(--gold)]">measurable rigour.</em>
                 </>
               }
               description="A track record built across data centers, enterprise networks and mission-critical systems."
@@ -412,8 +442,14 @@ function HomePage() {
       </section>
 
       {/* Our People — premium executive cards */}
-      <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-70" />
+      <section
+        className="section-y relative overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-70"
+        />
         <div className="container-px mx-auto">
           <div className="grid gap-14 lg:grid-cols-12 lg:items-end mb-20">
             <div className="lg:col-span-8">
@@ -461,7 +497,9 @@ function HomePage() {
                     <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100" />
                   </div>
                   <div className="relative p-7 md:p-8">
-                    <p className="text-[10px] tracking-[0.3em] uppercase text-[var(--gold)] font-semibold">{p.role}</p>
+                    <p className="text-[10px] tracking-[0.3em] uppercase text-[var(--gold)] font-semibold">
+                      {p.role}
+                    </p>
                     <h3 className="mt-3 font-display text-xl md:text-2xl font-semibold text-[var(--navy)] tracking-[-0.02em] leading-tight">
                       {p.name}
                     </h3>
@@ -519,9 +557,15 @@ function WhatWeDo() {
   const current = items[active];
 
   return (
-    <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
+    <section
+      className="section-y relative overflow-hidden"
+      style={{ background: "var(--grad-ivory)" }}
+    >
       {/* branded decorative backdrop */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-grid-soft opacity-[0.35]" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-grid-soft opacity-[0.35]"
+      />
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 -left-40 h-[32rem] w-[32rem] rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--gold)_10%,transparent),transparent_65%)] blur-2xl"
@@ -537,8 +581,9 @@ function WhatWeDo() {
           <div className="md:col-span-8">
             <p className="eyebrow text-[var(--gold)]">What we do</p>
             <h2 className="mt-4 font-display text-3xl md:text-5xl font-light tracking-[-0.025em] leading-[1.05] text-[var(--navy)]">
-              End-to-end engineering, technology and <em className="not-italic text-[var(--gold)]">infrastructure</em> —
-              delivered as one practice.
+              End-to-end engineering, technology and{" "}
+              <em className="not-italic text-[var(--gold)]">infrastructure</em> — delivered as one
+              practice.
             </h2>
           </div>
           <div className="md:col-span-4 md:text-right" />
@@ -550,7 +595,10 @@ function WhatWeDo() {
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <div className="relative">
               {/* Gold hairline corner accents */}
-              <span aria-hidden className="absolute -top-3 -left-3 h-7 w-7 border-t border-l border-[var(--gold)]/70" />
+              <span
+                aria-hidden
+                className="absolute -top-3 -left-3 h-7 w-7 border-t border-l border-[var(--gold)]/70"
+              />
               <span
                 aria-hidden
                 className="absolute -bottom-3 -right-3 h-7 w-7 border-b border-r border-[var(--gold)]/70"
@@ -579,7 +627,9 @@ function WhatWeDo() {
                       {current.n}
                     </span>
                     <span className="h-px flex-1 bg-[var(--gold)]/60" />
-                    <span className="text-[10px] tracking-[0.28em] uppercase text-white/70">Practice</span>
+                    <span className="text-[10px] tracking-[0.28em] uppercase text-white/70">
+                      Practice
+                    </span>
                   </div>
                   <h3
                     key={`title-${current.slug}`}
@@ -649,7 +699,9 @@ function WhatWeDo() {
                           <h3
                             className={[
                               "font-display text-[17px] md:text-[19px] font-semibold tracking-[-0.01em] leading-tight transition-colors duration-300",
-                              isActive ? "text-[var(--navy)]" : "text-[var(--navy)]/85 group-hover:text-[var(--navy)]",
+                              isActive
+                                ? "text-[var(--navy)]"
+                                : "text-[var(--navy)]/85 group-hover:text-[var(--navy)]",
                             ].join(" ")}
                           >
                             {it.title}
@@ -678,8 +730,8 @@ function WhatWeDo() {
 
             <div className="mt-8 flex items-center justify-between gap-6">
               <p className="text-[13px] text-muted-foreground max-w-sm">
-                A single accountable partner for the systems that keep modern organisations powered, connected and
-                secure.
+                A single accountable partner for the systems that keep modern organisations powered,
+                connected and secure.
               </p>
               <Link to="/services" className="btn-ghost shrink-0" data-cursor="hover">
                 All services <ArrowRight className="h-4 w-4" />

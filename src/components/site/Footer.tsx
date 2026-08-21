@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUp, Linkedin, Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/roya-logo-new.png.asset.json";
-import visionLogo from "@/assets/vision-2030-v3.png.asset.json";
+import logo from "@/assets/roya-logo.png";
+import visionLogo from "@/assets/vision-2030-v3.png";
 
 const QUICK = [
   { to: "/", label: "Home" },
@@ -39,7 +39,10 @@ export function Footer() {
       <div className="absolute inset-0 -z-20" style={{ background: "var(--grad-navy)" }} />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,color-mix(in_oklab,var(--gold)_22%,transparent),transparent_55%)]" />
       <div className="absolute inset-y-0 right-0 -z-10 w-1/2 bg-[radial-gradient(ellipse_at_bottom_right,color-mix(in_oklab,var(--emerald-deep)_65%,transparent),transparent_60%)]" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-[0.08] bg-grid-soft" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.08] bg-grid-soft"
+      />
       <div
         aria-hidden
         className="pointer-events-none absolute -top-44 -right-40 -z-10 h-[30rem] w-[30rem] rounded-full border border-[var(--gold)]/15"
@@ -65,18 +68,23 @@ export function Footer() {
           {/* Brand column — logos + description */}
           <div className="lg:col-span-4">
             <div className="inline-flex items-center gap-5 md:gap-6 rounded-2xl bg-white/95 px-5 py-3.5 shadow-lg ring-1 ring-white/20">
-              <img src={logo.url} alt="Roya Ventures" className="h-12 md:h-14 lg:h-16 w-auto" loading="lazy" />
+              <img
+                src={logo}
+                alt="Roya Ventures"
+                className="h-12 md:h-14 lg:h-16 w-auto"
+                loading="lazy"
+              />
               <span aria-hidden className="h-10 md:h-12 w-px bg-[var(--navy)]/15" />
               <img
-                src={visionLogo.url}
+                src={visionLogo}
                 alt="Saudi Vision 2030"
                 className="h-12 md:h-14 lg:h-16 w-auto"
                 loading="lazy"
               />
             </div>
             <p className="mt-7 text-[14.5px] leading-[1.85] text-white/70 font-light max-w-md">
-              A multidisciplinary technology and engineering firm — delivering data centers, networks, security and IT
-              under a single accountable mandate.
+              A multidisciplinary technology and engineering firm — delivering data centers,
+              networks, security and IT under a single accountable mandate.
             </p>
 
             <div className="mt-8 flex gap-3">
@@ -144,7 +152,9 @@ export function Footer() {
                   <MapPin className="h-4 w-4" strokeWidth={1.5} />
                 </span>
                 <div className="pt-0.5">
-                  <div className="text-[11px] tracking-[0.22em] uppercase text-white/45 mb-1">Address</div>
+                  <div className="text-[11px] tracking-[0.22em] uppercase text-white/45 mb-1">
+                    Address
+                  </div>
                   <div className="text-white/85 leading-relaxed">
                     Al Nasiriah Street, West Naseem Dist, Riyadh, KSA
                     <br />
@@ -157,7 +167,9 @@ export function Footer() {
                   <Phone className="h-4 w-4" strokeWidth={1.5} />
                 </span>
                 <div className="pt-0.5">
-                  <div className="text-[11px] tracking-[0.22em] uppercase text-white/45 mb-1">Phone</div>
+                  <div className="text-[11px] tracking-[0.22em] uppercase text-white/45 mb-1">
+                    Phone
+                  </div>
                   <div className="space-y-1">
                     {PHONES.map((p) => (
                       <a
@@ -177,7 +189,9 @@ export function Footer() {
                   <Mail className="h-4 w-4" strokeWidth={1.5} />
                 </span>
                 <div className="pt-0.5 min-w-0 flex-1">
-                  <div className="text-[11px] tracking-[0.22em] uppercase text-white/45 mb-1">Email</div>
+                  <div className="text-[11px] tracking-[0.22em] uppercase text-white/45 mb-1">
+                    Email
+                  </div>
                   <div className="space-y-1">
                     {EMAILS.map((e) => (
                       <a

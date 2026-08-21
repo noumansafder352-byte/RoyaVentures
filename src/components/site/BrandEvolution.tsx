@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import spidernetLogo from "@/assets/brand/spidernet-logo.png.asset.json";
-import royaLogo from "@/assets/brand/roya-ventures-logo.png.asset.json";
+import spidernetLogo from "@/assets/brand/spidernet-logo.png";
+import royaLogo from "@/assets/brand/roya-ventures-logo.png";
 
 function useInView<T extends HTMLElement>(threshold = 0.12) {
   const ref = useRef<T | null>(null);
@@ -251,12 +251,18 @@ export function BrandEvolution() {
       <div
         aria-hidden
         className="be-orb-a pointer-events-none absolute -top-40 -left-20 -z-10 h-[36rem] w-[36rem] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--emerald-deep) 18%, transparent), transparent 65%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in oklab, var(--emerald-deep) 18%, transparent), transparent 65%)",
+        }}
       />
       <div
         aria-hidden
         className="be-orb-b pointer-events-none absolute -bottom-40 -right-20 -z-10 h-[40rem] w-[40rem] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 22%, transparent), transparent 65%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in oklab, var(--gold) 22%, transparent), transparent 65%)",
+        }}
       />
       <div aria-hidden className="pointer-events-none absolute inset-6 -z-10 hidden md:block">
         <span className="absolute top-0 left-0 h-6 w-6 border-t border-l border-[var(--gold)]/40" />
@@ -294,7 +300,7 @@ export function BrandEvolution() {
               }}
             >
               <img
-                src={spidernetLogo.url}
+                src={spidernetLogo}
                 alt="SpiderNet — former company logo"
                 className="be-logo be-logo-past h-20 w-auto max-w-[260px] object-contain lg:h-24"
                 loading="lazy"
@@ -327,7 +333,9 @@ export function BrandEvolution() {
                 className="absolute left-1/2 top-1/2"
                 style={{
                   opacity: shown ? 1 : 0,
-                  transform: shown ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -50%) scale(0.9)",
+                  transform: shown
+                    ? "translate(-50%, -50%) scale(1)"
+                    : "translate(-50%, -50%) scale(0.9)",
                   transition: `opacity 800ms ${EASE} 700ms, transform 800ms ${EASE} 700ms`,
                 }}
               >
@@ -348,7 +356,6 @@ export function BrandEvolution() {
               </div>
             </div>
 
-
             {/* Roya Ventures */}
             <div
               className="relative shrink-0"
@@ -361,10 +368,13 @@ export function BrandEvolution() {
               <span
                 aria-hidden
                 className="be-halo pointer-events-none absolute left-1/2 top-1/2 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
-                style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 32%, transparent), transparent 65%)" }}
+                style={{
+                  background:
+                    "radial-gradient(circle, color-mix(in oklab, var(--gold) 32%, transparent), transparent 65%)",
+                }}
               />
               <img
-                src={royaLogo.url}
+                src={royaLogo}
                 alt="Roya Ventures — new company logo"
                 className="be-logo be-logo-new h-20 w-auto max-w-[280px] object-contain lg:h-24"
                 loading="lazy"
@@ -372,7 +382,6 @@ export function BrandEvolution() {
               <span aria-hidden className="be-pedestal" />
             </div>
           </div>
-
 
           {/* Mobile: vertical single composition */}
           <div className="relative flex flex-col items-center lg:hidden">
@@ -385,7 +394,7 @@ export function BrandEvolution() {
               }}
             >
               <img
-                src={spidernetLogo.url}
+                src={spidernetLogo}
                 alt="SpiderNet — former company logo"
                 width={220}
                 height={64}
@@ -406,10 +415,7 @@ export function BrandEvolution() {
                 style={{ bottom: "-5px", background: "var(--emerald-deep)" }}
               />
               <span className="be-comet be-comet-v absolute" />
-              <span
-                className="be-comet be-comet-v absolute"
-                style={{ animationDelay: "3.25s" }}
-              />
+              <span className="be-comet be-comet-v absolute" style={{ animationDelay: "3.25s" }} />
               {/* Centerpiece badge on the line */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div className="be-glass relative flex items-center gap-2 rounded-full px-4 py-2 whitespace-nowrap">
@@ -440,10 +446,13 @@ export function BrandEvolution() {
               <span
                 aria-hidden
                 className="be-halo pointer-events-none absolute left-1/2 top-1/2 -z-10 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
-                style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--gold) 32%, transparent), transparent 65%)" }}
+                style={{
+                  background:
+                    "radial-gradient(circle, color-mix(in oklab, var(--gold) 32%, transparent), transparent 65%)",
+                }}
               />
               <img
-                src={royaLogo.url}
+                src={royaLogo}
                 alt="Roya Ventures — new company logo"
                 width={260}
                 height={80}
@@ -453,7 +462,6 @@ export function BrandEvolution() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

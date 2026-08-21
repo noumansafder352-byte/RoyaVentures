@@ -31,12 +31,12 @@ import webHosting from "@/assets/web/web-hosting.jpg";
 import webSecurity from "@/assets/web/web-security.jpg";
 import webMonitoring from "@/assets/web/web-monitoring.jpg";
 import webTeam from "@/assets/web/web-team.jpg";
-import logoChalhoub from "@/assets/clients/corporate/chalhoub.png.asset.json";
-import logoSephora from "@/assets/clients/corporate/sephora-2.png.asset.json";
-import logoNesma from "@/assets/clients/corporate/nesma-telecom.png.asset.json";
-import shot1 from "@/assets/projects/nujaima/data-centre.jpeg.asset.json";
-import shot2 from "@/assets/projects/chalhoub/elv-system.webp.asset.json";
-import shot3 from "@/assets/projects/warehouse/warehouse-datacenter.jpg.asset.json";
+import logoChalhoub from "@/assets/clients/corporate/chalhoub.png";
+import logoSephora from "@/assets/clients/corporate/sephora-2.png";
+import logoNesma from "@/assets/clients/corporate/nesma-telecom.png";
+import shot1 from "@/assets/projects/nujaima/data-centre.png";
+import shot2 from "@/assets/projects/chalhoub/elv-system.png";
+import shot3 from "@/assets/projects/warehouse/warehouse-datacenter.png";
 
 export const Route = createFileRoute("/services/website-development-amcs")({
   head: () => ({
@@ -64,7 +64,12 @@ export const Route = createFileRoute("/services/website-development-amcs")({
   component: WebDevServicePage,
 });
 
-const TRUST = ["10+ Years in the Field", "Certified Developers", "All Project Sizes", "Saudi Arabia & Beyond"];
+const TRUST = [
+  "10+ Years in the Field",
+  "Certified Developers",
+  "All Project Sizes",
+  "Saudi Arabia & Beyond",
+];
 
 const OFFERINGS = [
   {
@@ -119,8 +124,14 @@ const PROCESS: [string, string][] = [
     "Discovery & Planning",
     "We start by understanding your business, your audience, and what you need the website to do.",
   ],
-  ["Development & Build", "Our developers build on clean, well-structured code optimised for speed and performance."],
-  ["Content Integration", "We integrate content text, images, videos, product listings into the finished design."],
+  [
+    "Development & Build",
+    "Our developers build on clean, well-structured code optimised for speed and performance.",
+  ],
+  [
+    "Content Integration",
+    "We integrate content text, images, videos, product listings into the finished design.",
+  ],
   ["Testing & Quality Check", "Every page is tested across devices and browsers before launch."],
   [
     "AMC & Ongoing Maintenance",
@@ -146,7 +157,10 @@ const FAQS: [string, string][] = [
     "Can you take over maintenance of a website someone else built?",
     "Yes. We first review the existing site, assess its technical health, and advise on what needs to be resolved before we take it on.",
   ],
-  ["Do you provide hosting, or do we arrange our own?", "We can manage hosting on your behalf as part of the AMC."],
+  [
+    "Do you provide hosting, or do we arrange our own?",
+    "We can manage hosting on your behalf as part of the AMC.",
+  ],
   [
     "Can we update the website ourselves?",
     "Yes. We build on CMS platforms specifically so your team can manage day-to-day content on their own.",
@@ -165,7 +179,8 @@ function WebDevServicePage() {
         eyebrow="Website development & AMC"
         title={
           <>
-            Web Development and AMC Services in <span className="text-[var(--gold)]">Saudi Arabia</span>
+            Web Development and AMC Services in{" "}
+            <span className="text-[var(--gold)]">Saudi Arabia</span>
           </>
         }
         subtitle="As a leading Web Development company in Saudi Arabia, we've been designing, building, and managing websites and IT infrastructure."
@@ -200,9 +215,10 @@ function WebDevServicePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-base md:text-[17px] leading-[1.85] text-muted-foreground lg:pt-6">
-                If you're seeing dropped connections and network lag, it's usually due to poorly configured
-                infrastructure that struggles to support your daily traffic. What you want is seamless, secure, and
-                high-speed connectivity that reliably covers your entire workspace. Here's how you get it.
+                If you're seeing dropped connections and network lag, it's usually due to poorly
+                configured infrastructure that struggles to support your daily traffic. What you
+                want is seamless, secure, and high-speed connectivity that reliably covers your
+                entire workspace. Here's how you get it.
               </p>
             </Reveal>
           </div>
@@ -252,7 +268,9 @@ function WebDevServicePage() {
                       {o.title}
                     </h3>
                     <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-4">
-                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">{o.text}</p>
+                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">
+                        {o.text}
+                      </p>
                     </div>
                     <div className="mt-6 h-px w-10 bg-[var(--gold)] transition-all duration-500 group-hover:w-24" />
                   </div>
@@ -303,15 +321,23 @@ function WebDevServicePage() {
                     <p className="font-display text-4xl md:text-5xl font-semibold tracking-[-0.03em] text-[var(--gold)]">
                       10+
                     </p>
-                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">Years in the field</p>
+                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">
+                      Years in the field
+                    </p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-5">
                   {[
                     { src: webCorporate, alt: "Corporate website design on a desktop monitor" },
-                    { src: webMonitoring, alt: "Website uptime and performance monitoring dashboard" },
+                    {
+                      src: webMonitoring,
+                      alt: "Website uptime and performance monitoring dashboard",
+                    },
                   ].map((im) => (
-                    <div key={im.alt} className="group relative overflow-hidden rounded-2xl border border-white/10">
+                    <div
+                      key={im.alt}
+                      className="group relative overflow-hidden rounded-2xl border border-white/10"
+                    >
                       <img
                         src={im.src}
                         alt={im.alt}
@@ -339,7 +365,9 @@ function WebDevServicePage() {
                       className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-[var(--gold)]/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     />
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">{w.title}</h3>
+                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">
+                        {w.title}
+                      </h3>
                       <div className="mt-4 h-px w-10 bg-[var(--gold)]/70 transition-all duration-500 group-hover:w-20" />
                     </div>
                     <span className="shrink-0 font-display text-2xl md:text-3xl font-semibold tracking-tight text-transparent [-webkit-text-stroke:1.5px_var(--gold)] opacity-50 transition-all duration-500 group-hover:opacity-100">
@@ -431,10 +459,14 @@ function WebDevServicePage() {
                           </h3>
                           <div
                             className={`grid transition-all duration-500 ease-out ${
-                              isActive ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"
+                              isActive
+                                ? "grid-rows-[1fr] opacity-100 mt-3"
+                                : "grid-rows-[0fr] opacity-0"
                             }`}
                           >
-                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">{text}</p>
+                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">
+                              {text}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -463,7 +495,9 @@ function WebDevServicePage() {
                     <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-[var(--gold)]/35 text-[var(--gold)] transition-colors duration-500 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)]">
                       <Icon className="h-5 w-5" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">{ind.title}</h3>
+                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">
+                      {ind.title}
+                    </h3>
                   </div>
                 </Reveal>
               );
@@ -480,8 +514,8 @@ function WebDevServicePage() {
               <p className="gold-rule">Track record</p>
               <h2 className="heading-lg mt-6">Trusted Across the Region</h2>
               <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-muted-foreground">
-                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted Roya Ventures to power
-                their operations.
+                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted
+                Roya Ventures to power their operations.
               </p>
               <div className="mt-8 gold-divider" />
               <Reveal>
@@ -492,7 +526,7 @@ function WebDevServicePage() {
                       className="grid place-items-center rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] p-6 shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/40"
                     >
                       <img
-                        src={logo.url}
+                        src={logo}
                         alt="Client logo"
                         className="h-10 md:h-12 w-auto object-contain opacity-80 transition-opacity duration-500 hover:opacity-100"
                       />
@@ -509,7 +543,8 @@ function WebDevServicePage() {
                   Enterprises Across Saudi Arabia
                 </h3>
                 <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">
-                  Websites and IT infrastructure designed, built and maintained under long-running AMCs.
+                  Websites and IT infrastructure designed, built and maintained under long-running
+                  AMCs.
                 </p>
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   {[shot1, shot2, shot3].map((img, i) => (
@@ -518,7 +553,7 @@ function WebDevServicePage() {
                       className="group overflow-hidden rounded-xl border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/45 hover:shadow-[var(--shadow-elegant)]"
                     >
                       <img
-                        src={img.url}
+                        src={img}
                         alt="Completed Roya Ventures project"
                         loading="lazy"
                         className="h-20 sm:h-24 w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -572,7 +607,9 @@ function WebDevServicePage() {
                   </AccordionPrimitive.Header>
                   <AccordionContent className="px-5 md:px-8 pb-7 pt-0">
                     <div className="gold-divider mb-5" />
-                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">{a}</p>
+                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">
+                      {a}
+                    </p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -594,8 +631,8 @@ function WebDevServicePage() {
                   Ready to Build a Creative Website &amp; AMC?
                 </h2>
                 <p className="mt-5 mx-auto max-w-xl text-white/75 text-base md:text-lg leading-relaxed font-light">
-                  Schedule a complimentary consultation to explore solutions and a development roadmap with our custom
-                  digital signage and footfall counting system company.
+                  Schedule a complimentary consultation to explore solutions and a development
+                  roadmap with our custom digital signage and footfall counting system company.
                 </p>
                 <div className="mt-10 flex justify-center">
                   <Link to="/contact" className="btn-primary btn-on-dark">

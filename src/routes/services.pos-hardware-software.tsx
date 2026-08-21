@@ -31,12 +31,12 @@ import posRetailSoftware from "@/assets/pos/pos-retail-software.jpg";
 import posRestaurant from "@/assets/pos/pos-restaurant.jpg";
 import posCloud from "@/assets/pos/pos-cloud.jpg";
 import posEngineer from "@/assets/pos/pos-engineer.jpg";
-import logoChalhoub from "@/assets/clients/corporate/chalhoub.png.asset.json";
-import logoSephora from "@/assets/clients/corporate/sephora-2.png.asset.json";
-import logoNesma from "@/assets/clients/corporate/nesma-telecom.png.asset.json";
-import shotCafe1 from "@/assets/projects/cafe/cafe-new-3.jpg.asset.json";
-import shotCafe2 from "@/assets/projects/cafe/cafe-new-4.jpg.asset.json";
-import shotCafe3 from "@/assets/projects/cafe/cafe-new-5.png.asset.json";
+import logoChalhoub from "@/assets/clients/corporate/chalhoub.png";
+import logoSephora from "@/assets/clients/corporate/sephora-2.png";
+import logoNesma from "@/assets/clients/corporate/nesma-telecom.png";
+import shotCafe1 from "@/assets/projects/cafe/cafe-new-3.png";
+import shotCafe2 from "@/assets/projects/cafe/cafe-new-4.png";
+import shotCafe3 from "@/assets/projects/cafe/cafe-new-5.png";
 
 export const Route = createFileRoute("/services/pos-hardware-software")({
   head: () => ({
@@ -64,7 +64,12 @@ export const Route = createFileRoute("/services/pos-hardware-software")({
   component: PosServicePage,
 });
 
-const TRUST = ["10+ Years in the Field", "Certified Engineers", "All Project Sizes", "Saudi Arabia & Beyond"];
+const TRUST = [
+  "10+ Years in the Field",
+  "Certified Engineers",
+  "All Project Sizes",
+  "Saudi Arabia & Beyond",
+];
 
 const OFFERINGS = [
   {
@@ -122,7 +127,10 @@ const PROCESS: [string, string][] = [
     "Supply & Configure Hardware",
     "We supply, set up, and test every hardware component before it arrives at your site.",
   ],
-  ["Install & Configure Software", "Our certified engineers install and configure your POS software."],
+  [
+    "Install & Configure Software",
+    "Our certified engineers install and configure your POS software.",
+  ],
   [
     "Data Migration",
     "If you're moving from an existing system, we handle the migration of your product data, customer records and previous sales data.",
@@ -177,7 +185,8 @@ function PosServicePage() {
         eyebrow="POS hardware & software"
         title={
           <>
-            Hardware and Software (POS) Services in <span className="text-[var(--gold)]">Saudi Arabia</span>
+            Hardware and Software (POS) Services in{" "}
+            <span className="text-[var(--gold)]">Saudi Arabia</span>
           </>
         }
         subtitle="We deliver hardware and software services in Saudi Arabia designed for high performance and a smooth user experience."
@@ -212,9 +221,10 @@ function PosServicePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-base md:text-[17px] leading-[1.85] text-muted-foreground lg:pt-6">
-                If you're seeing constant system crashes, it's usually because of outdated equipment and un-optimized
-                softwares. What you want is a fast, reliable and perfectly integrated IT ecosystem that keeps your
-                business running without any interruptions. Here's how you get it at Roya Ventures.
+                If you're seeing constant system crashes, it's usually because of outdated equipment
+                and un-optimized softwares. What you want is a fast, reliable and perfectly
+                integrated IT ecosystem that keeps your business running without any interruptions.
+                Here's how you get it at Roya Ventures.
               </p>
             </Reveal>
           </div>
@@ -264,7 +274,9 @@ function PosServicePage() {
                       {o.title}
                     </h3>
                     <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-4">
-                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">{o.text}</p>
+                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">
+                        {o.text}
+                      </p>
                     </div>
                     <div className="mt-6 h-px w-10 bg-[var(--gold)] transition-all duration-500 group-hover:w-24" />
                   </div>
@@ -315,7 +327,9 @@ function PosServicePage() {
                     <p className="font-display text-4xl md:text-5xl font-semibold tracking-[-0.03em] text-[var(--gold)]">
                       10+
                     </p>
-                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">Years in the field</p>
+                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">
+                      Years in the field
+                    </p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-5">
@@ -323,7 +337,10 @@ function PosServicePage() {
                     { src: posKiosk, alt: "Self-checkout kiosk in a modern supermarket" },
                     { src: posCloud, alt: "Multi-branch cloud POS reporting dashboard" },
                   ].map((im) => (
-                    <div key={im.alt} className="group relative overflow-hidden rounded-2xl border border-white/10">
+                    <div
+                      key={im.alt}
+                      className="group relative overflow-hidden rounded-2xl border border-white/10"
+                    >
                       <img
                         src={im.src}
                         alt={im.alt}
@@ -351,7 +368,9 @@ function PosServicePage() {
                       className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-[var(--gold)]/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     />
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">{w.title}</h3>
+                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">
+                        {w.title}
+                      </h3>
                       <div className="mt-4 h-px w-10 bg-[var(--gold)]/70 transition-all duration-500 group-hover:w-20" />
                     </div>
                     <span className="shrink-0 font-display text-2xl md:text-3xl font-semibold tracking-tight text-transparent [-webkit-text-stroke:1.5px_var(--gold)] opacity-50 transition-all duration-500 group-hover:opacity-100">
@@ -443,10 +462,14 @@ function PosServicePage() {
                           </h3>
                           <div
                             className={`grid transition-all duration-500 ease-out ${
-                              isActive ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"
+                              isActive
+                                ? "grid-rows-[1fr] opacity-100 mt-3"
+                                : "grid-rows-[0fr] opacity-0"
                             }`}
                           >
-                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">{text}</p>
+                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">
+                              {text}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -475,7 +498,9 @@ function PosServicePage() {
                     <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-[var(--gold)]/35 text-[var(--gold)] transition-colors duration-500 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)]">
                       <Icon className="h-5 w-5" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">{ind.title}</h3>
+                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">
+                      {ind.title}
+                    </h3>
                   </div>
                 </Reveal>
               );
@@ -492,8 +517,8 @@ function PosServicePage() {
               <p className="gold-rule">Track record</p>
               <h2 className="heading-lg mt-6">Trusted Across the Region</h2>
               <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-muted-foreground">
-                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted Roya Ventures to power
-                their operations.
+                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted
+                Roya Ventures to power their operations.
               </p>
               <div className="mt-8 gold-divider" />
               <Reveal>
@@ -504,7 +529,7 @@ function PosServicePage() {
                       className="grid place-items-center rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] p-6 shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/40"
                     >
                       <img
-                        src={logo.url}
+                        src={logo}
                         alt="Client logo"
                         className="h-10 md:h-12 w-auto object-contain opacity-80 transition-opacity duration-500 hover:opacity-100"
                       />
@@ -530,7 +555,7 @@ function PosServicePage() {
                       className="group overflow-hidden rounded-xl border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/45 hover:shadow-[var(--shadow-elegant)]"
                     >
                       <img
-                        src={img.url}
+                        src={img}
                         alt="Completed POS deployment project"
                         loading="lazy"
                         className="h-20 sm:h-24 w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -584,7 +609,9 @@ function PosServicePage() {
                   </AccordionPrimitive.Header>
                   <AccordionContent className="px-5 md:px-8 pb-7 pt-0">
                     <div className="gold-divider mb-5" />
-                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">{a}</p>
+                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">
+                      {a}
+                    </p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -606,7 +633,8 @@ function PosServicePage() {
                   Ready For a POS That Works?
                 </h2>
                 <p className="mt-5 mx-auto max-w-xl text-white/75 text-base md:text-lg leading-relaxed font-light">
-                  Schedule a complimentary consultation to explore solutions and a development roadmap.
+                  Schedule a complimentary consultation to explore solutions and a development
+                  roadmap.
                 </p>
                 <div className="mt-10 flex justify-center">
                   <Link to="/contact" className="btn-primary btn-on-dark">

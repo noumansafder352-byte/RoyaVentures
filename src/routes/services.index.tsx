@@ -13,9 +13,16 @@ export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Services — Roya Ventures" },
-      { name: "description", content: "Roya Ventures' technology and engineering services — electrical, data centers, networking, fiber, fire protection, surveillance, EMS, signage, POS, web and IT." },
+      {
+        name: "description",
+        content:
+          "Roya Ventures' technology and engineering services — electrical, data centers, networking, fiber, fire protection, surveillance, EMS, signage, POS, web and IT.",
+      },
       { property: "og:title", content: "Services — Roya Ventures" },
-      { property: "og:description", content: "Twelve specialised practices for modern technology infrastructure." },
+      {
+        property: "og:description",
+        content: "Twelve specialised practices for modern technology infrastructure.",
+      },
     ],
   }),
   component: ServicesPage,
@@ -26,7 +33,12 @@ function ServicesPage() {
     <SiteLayout transparentHeader>
       <PageHero
         eyebrow="Our services"
-        title={<>Twelve disciplines. <span className="text-[var(--gold)]">One engineering standard.</span></>}
+        title={
+          <>
+            Twelve disciplines.{" "}
+            <span className="text-[var(--gold)]">One engineering standard.</span>
+          </>
+        }
         subtitle="A coordinated set of technology and engineering capabilities — designed, deployed and supported by senior practitioners under a single mandate."
         image={heroServices}
         height="compact"
@@ -38,7 +50,12 @@ function ServicesPage() {
         <div className="container-px mx-auto">
           <SectionHeading
             eyebrow="Capabilities"
-            title={<>Every system your operation depends on, <em className="not-italic text-[var(--gold)]">engineered as one.</em></>}
+            title={
+              <>
+                Every system your operation depends on,{" "}
+                <em className="not-italic text-[var(--gold)]">engineered as one.</em>
+              </>
+            }
             description="From the cabling in your walls to the software on your screens — each practice connects, so the whole works."
           />
 
@@ -151,11 +168,7 @@ function ServicesPage() {
                     >
                       {card}
                     </Link>
-
-
-
                   ) : (
-
                     card
                   )}
                 </Reveal>
@@ -174,28 +187,58 @@ function ServicesPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,color-mix(in_oklab,var(--emerald-deep)_60%,transparent),transparent_55%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/70 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/40 to-transparent" />
-        <div aria-hidden className="pointer-events-none absolute -top-40 -left-40 h-[34rem] w-[34rem] rounded-full border border-[var(--gold)]/12 float-shape -z-10" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-32 -right-32 h-[28rem] w-[28rem] rounded-full border border-[var(--gold)]/10 -z-10" />
-
-
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-40 -left-40 h-[34rem] w-[34rem] rounded-full border border-[var(--gold)]/12 float-shape -z-10"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-32 -right-32 h-[28rem] w-[28rem] rounded-full border border-[var(--gold)]/10 -z-10"
+        />
 
         <div className="container-px mx-auto">
           <SectionHeading
             eyebrow="How we work"
-            title={<>A disciplined approach <em className="not-italic text-[var(--gold)]">to every project.</em></>}
+            title={
+              <>
+                A disciplined approach{" "}
+                <em className="not-italic text-[var(--gold)]">to every project.</em>
+              </>
+            }
             description="Four phases. One accountable lead engineer. Systems that endure long after handover."
             invert
           />
           <div className="mt-20 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
             {[
-              ["01", "Survey", "On-site assessment, requirements capture and architecture options grounded in your operational reality."],
-              ["02", "Design", "Detailed engineering — BoQ, drawings, schedules and integration plan signed off before a single cable is pulled."],
-              ["03", "Deliver", "Installation and commissioning by senior engineers, with progress reporting and rigorous quality controls."],
-              ["04", "Support", "AMCs, monitoring and 24/7 response — keeping every system you depend on running at standard."],
+              [
+                "01",
+                "Survey",
+                "On-site assessment, requirements capture and architecture options grounded in your operational reality.",
+              ],
+              [
+                "02",
+                "Design",
+                "Detailed engineering — BoQ, drawings, schedules and integration plan signed off before a single cable is pulled.",
+              ],
+              [
+                "03",
+                "Deliver",
+                "Installation and commissioning by senior engineers, with progress reporting and rigorous quality controls.",
+              ],
+              [
+                "04",
+                "Support",
+                "AMCs, monitoring and 24/7 response — keeping every system you depend on running at standard.",
+              ],
             ].map(([num, title, text], i) => (
               <Reveal key={num} delay={i * 0.07}>
-                <div className="relative h-full rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-9 transition-all duration-500 hover:bg-white/[0.07] hover:border-[var(--gold)]/40 hover:-translate-y-1" data-cursor="hover">
-                  <p className="font-display text-6xl font-light text-[var(--gold)]/90 tracking-[-0.04em]">{num}</p>
+                <div
+                  className="relative h-full rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-9 transition-all duration-500 hover:bg-white/[0.07] hover:border-[var(--gold)]/40 hover:-translate-y-1"
+                  data-cursor="hover"
+                >
+                  <p className="font-display text-6xl font-light text-[var(--gold)]/90 tracking-[-0.04em]">
+                    {num}
+                  </p>
                   <div className="mt-6 gold-divider" />
                   <h3 className="mt-6 text-xl font-semibold text-white tracking-tight">{title}</h3>
                   <p className="mt-4 text-white/70 leading-relaxed text-sm">{text}</p>

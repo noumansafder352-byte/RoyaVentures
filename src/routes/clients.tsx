@@ -8,99 +8,146 @@ import { Quote } from "lucide-react";
 import heroClients from "@/assets/hero-clients.jpg";
 import featureImage from "@/assets/svc-datacenter.jpg";
 
-// Auto-import all 32 client logo asset pointers
-const logoModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/clients*.jpg.asset.json",
-  { eager: true },
-);
+// Auto-import all client logos
+const logoModules = import.meta.glob("../assets/clients/clients*.{jpg,jpeg,png}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const CLIENT_LOGOS = Object.entries(logoModules)
-  .map(([path, mod]) => {
-    const n = Number(path.match(/clients(\d+)\.jpg/)?.[1] ?? 0);
-    return { n, url: mod.default.url };
+  .map(([path, url]) => {
+    const match = path.match(/clients(\d+)\.(jpg|jpeg|png)$/i);
+
+    return {
+      n: Number(match?.[1] ?? 0),
+      url: url as string,
+    };
   })
   .sort((a, b) => a.n - b.n);
 
 // Global Luxury Brands — official logos
-const luxuryModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/luxury/*.png.asset.json",
-  { eager: true },
-);
+const luxuryModules = import.meta.glob("../assets/clients/luxury/*.{png,jpg,jpeg}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const LUXURY_LOGOS = Object.entries(luxuryModules)
-  .map(([path, mod]) => {
-    const name = path.match(/luxury\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+  .map(([path, url]) => {
+    const name = path.match(/luxury[\\/](.+)\.(png|jpg|jpeg)$/i)?.[1] ?? "";
+
+    return {
+      name,
+      url: url as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Premium Fashion — official logos
-const fashionModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/fashion/*.png.asset.json",
-  { eager: true },
-);
+const fashionModules = import.meta.glob("../assets/clients/fashion/*.{png,jpg,jpeg}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const FASHION_LOGOS = Object.entries(fashionModules)
-  .map(([path, mod]) => {
-    const name = path.match(/fashion\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+  .map(([path, url]) => {
+    const name = path.match(/fashion[\\/](.+)\.(png|jpg|jpeg)$/i)?.[1] ?? "";
+
+    return {
+      name,
+      url: url as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Beauty & Cosmetics — official logos
-const beautyModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/beauty/*.png.asset.json",
-  { eager: true },
-);
+const beautyModules = import.meta.glob("../assets/clients/beauty/*.{png,jpg,jpeg}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const BEAUTY_LOGOS = Object.entries(beautyModules)
-  .map(([path, mod]) => {
-    const name = path.match(/beauty\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+  .map(([path, url]) => {
+    const name = path.match(/beauty[\\/](.+)\.(png|jpg|jpeg)$/i)?.[1] ?? "";
+
+    return {
+      name,
+      url: url as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Fragrance & Lifestyle — official logos
-const fragranceModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/fragrance/*.png.asset.json",
-  { eager: true },
-);
+const fragranceModules = import.meta.glob("../assets/clients/fragrance/*.{png,jpg,jpeg}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const FRAGRANCE_LOGOS = Object.entries(fragranceModules)
-  .map(([path, mod]) => {
-    const name = path.match(/fragrance\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+  .map(([path, url]) => {
+    const name = path.match(/fragrance[\\/](.+)\.(png|jpg|jpeg)$/i)?.[1] ?? "";
+
+    return {
+      name,
+      url: url as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Hospitality & Restaurants — official logos
-const hospitalityModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/hospitality/*.png.asset.json",
-  { eager: true },
-);
+const hospitalityModules = import.meta.glob("../assets/clients/hospitality/*.{png,jpg,jpeg}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const HOSPITALITY_LOGOS = Object.entries(hospitalityModules)
-  .map(([path, mod]) => {
-    const name = path.match(/hospitality\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+  .map(([path, url]) => {
+    const name = path.match(/hospitality[\\/](.+)\.(png|jpg|jpeg)$/i)?.[1] ?? "";
+
+    return {
+      name,
+      url: url as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Corporate Clients — official logos
-const corporateModules = import.meta.glob<{ default: { url: string } }>(
-  "@/assets/clients/corporate/*.png.asset.json",
-  { eager: true },
-);
+const corporateModules = import.meta.glob("../assets/clients/corporate/*.{png,jpg,jpeg}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 const CORPORATE_LOGOS = Object.entries(corporateModules)
-  .map(([path, mod]) => {
-    const name = path.match(/corporate\/(.+)\.png\.asset\.json$/)?.[1] ?? "";
-    return { name, url: mod.default.url };
+  .map(([path, url]) => {
+    const name = path.match(/corporate[\\/](.+)\.(png|jpg|jpeg)$/i)?.[1] ?? "";
+
+    return {
+      name,
+      url: url as string,
+    };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
-
-
 
 export const Route = createFileRoute("/clients")({
   head: () => ({
     meta: [
       { title: "Clients — Roya Ventures" },
-      { name: "description", content: "A confidential roster of clients across five continents — from listed multinationals to founder-led enterprises and sovereign institutions." },
+      {
+        name: "description",
+        content:
+          "A confidential roster of clients across five continents — from listed multinationals to founder-led enterprises and sovereign institutions.",
+      },
       { property: "og:title", content: "Clients — Roya Ventures" },
-      { property: "og:description", content: "Trusted by leaders across industries and geographies." },
+      {
+        property: "og:description",
+        content: "Trusted by leaders across industries and geographies.",
+      },
     ],
   }),
   component: ClientsPage,
@@ -108,12 +155,14 @@ export const Route = createFileRoute("/clients")({
 
 const TESTIMONIALS = [
   {
-    quote: "Roya brought a level of strategic clarity and discretion that few firms can match. They became an extension of our leadership team during a defining moment for the company.",
+    quote:
+      "Roya brought a level of strategic clarity and discretion that few firms can match. They became an extension of our leadership team during a defining moment for the company.",
     name: "Chief Executive Officer",
     org: "Listed Industrial Group",
   },
   {
-    quote: "Their counsel through the transaction was steady, candid and consistently aligned with our long-term interest. We would not have closed without them.",
+    quote:
+      "Their counsel through the transaction was steady, candid and consistently aligned with our long-term interest. We would not have closed without them.",
     name: "Chair of the Board",
     org: "Family-Owned Conglomerate",
   },
@@ -140,7 +189,11 @@ const DIFFERENTIATORS = [
 
 // Client categories — assign logo numbers (1-32) to each category as they become available.
 // Leave `logoIds` empty to render a "coming soon" placeholder for that category.
-const CLIENT_CATEGORIES: { name: string; logoIds: number[]; logos?: { name: string; url: string }[] }[] = [
+const CLIENT_CATEGORIES: {
+  name: string;
+  logoIds: number[];
+  logos?: { name: string; url: string }[];
+}[] = [
   { name: "Global Luxury Brands", logoIds: [], logos: LUXURY_LOGOS },
   { name: "Premium Fashion", logoIds: [], logos: FASHION_LOGOS },
   { name: "Beauty & Cosmetics", logoIds: [], logos: BEAUTY_LOGOS },
@@ -149,13 +202,16 @@ const CLIENT_CATEGORIES: { name: string; logoIds: number[]; logos?: { name: stri
   { name: "Corporate Clients", logoIds: [], logos: CORPORATE_LOGOS },
 ];
 
-
 function ClientsPage() {
   return (
     <SiteLayout transparentHeader>
       <PageHero
         eyebrow="Our clients"
-        title={<>A confidential roster of <span className="text-[var(--gold)]">global leaders</span>.</>}
+        title={
+          <>
+            A confidential roster of <span className="text-[var(--gold)]">global leaders</span>.
+          </>
+        }
         subtitle="From founder-led enterprises to listed multinationals and sovereign institutions, leaders entrust us with the moments that matter most."
         image={heroClients}
         height="compact"
@@ -174,7 +230,8 @@ function ClientsPage() {
               <Reveal>
                 <p className="gold-rule">Why choose Roya Ventures</p>
                 <h2 className="heading-lg mt-5 text-[var(--navy)]">
-                  The qualities that <em className="not-italic text-[var(--gold)]">define our practice.</em>
+                  The qualities that{" "}
+                  <em className="not-italic text-[var(--gold)]">define our practice.</em>
                 </h2>
                 <p className="mt-5 text-[17px] leading-relaxed font-light text-muted-foreground max-w-xl">
                   Four commitments that shape every mandate — and the standard we hold ourselves to.
@@ -257,23 +314,35 @@ function ClientsPage() {
           </div>
         </div>
 
-
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/40 to-transparent" />
       </section>
 
       {/* Premium categorized logo showcase */}
-      <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
+      <section
+        className="section-y relative overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
         <div className="container-px mx-auto">
           <SectionHeading
             eyebrow="A Selection"
-            title={<>A selection of <em className="not-italic text-[var(--gold)]">those we have served.</em></>}
+            title={
+              <>
+                A selection of{" "}
+                <em className="not-italic text-[var(--gold)]">those we have served.</em>
+              </>
+            }
             description="With permission, a selection of those we have served. Many engagements remain confidential. A representative sample of public-facing relationships is shown below."
           />
 
           <div className="mt-20 space-y-24">
             {CLIENT_CATEGORIES.map((category, catIndex) => {
               const categoryLogos = category.logos
-                ? category.logos.map((l, i) => ({ key: l.name, url: l.url, alt: `${category.name} — ${l.name}`, i }))
+                ? category.logos.map((l, i) => ({
+                    key: l.name,
+                    url: l.url,
+                    alt: `${category.name} — ${l.name}`,
+                    i,
+                  }))
                 : CLIENT_LOGOS.filter((l) => category.logoIds.includes(l.n)).map((l, i) => ({
                     key: String(l.n),
                     url: l.url,
@@ -347,7 +416,11 @@ function ClientsPage() {
         <div className="container-px mx-auto">
           <SectionHeading
             eyebrow="In their words"
-            title={<>What our clients <em className="not-italic text-[var(--gold)]">say.</em></>}
+            title={
+              <>
+                What our clients <em className="not-italic text-[var(--gold)]">say.</em>
+              </>
+            }
             align="center"
           />
           <div className="mt-20 grid gap-8 md:grid-cols-2">

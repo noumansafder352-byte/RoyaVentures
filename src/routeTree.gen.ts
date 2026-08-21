@@ -9,56 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TeamRouteImport } from './routes/team'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as PartnersRouteImport } from './routes/partners'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ClientsRouteImport } from './routes/clients'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ClientsRouteImport } from './routes/clients'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PartnersRouteImport } from './routes/partners'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as TeamRouteImport } from './routes/team'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
-import { Route as ServicesWebsiteDevelopmentAmcsRouteImport } from './routes/services.website-development-amcs'
-import { Route as ServicesSurveillanceSystemRouteImport } from './routes/services.surveillance-system'
-import { Route as ServicesPosHardwareSoftwareRouteImport } from './routes/services.pos-hardware-software'
-import { Route as ServicesNetworkingRouteImport } from './routes/services.networking'
-import { Route as ServicesItServicesRouteImport } from './routes/services.it-services'
-import { Route as ServicesIntegratedFacilityManagementRouteImport } from './routes/services.integrated-facility-management'
-import { Route as ServicesFireFightingRouteImport } from './routes/services.fire-fighting'
-import { Route as ServicesEthernetFiberCablingRouteImport } from './routes/services.ethernet-fiber-cabling'
-import { Route as ServicesEmsAccessControlRouteImport } from './routes/services.ems-access-control'
-import { Route as ServicesElectricalContractsRouteImport } from './routes/services.electrical-contracts'
-import { Route as ServicesDigitalSignageInkDisplaysRouteImport } from './routes/services.digital-signage-ink-displays'
 import { Route as ServicesDataCenterSetupRouteImport } from './routes/services.data-center-setup'
+import { Route as ServicesDigitalSignageInkDisplaysRouteImport } from './routes/services.digital-signage-ink-displays'
+import { Route as ServicesElectricalContractsRouteImport } from './routes/services.electrical-contracts'
+import { Route as ServicesEmsAccessControlRouteImport } from './routes/services.ems-access-control'
+import { Route as ServicesEthernetFiberCablingRouteImport } from './routes/services.ethernet-fiber-cabling'
+import { Route as ServicesFireFightingRouteImport } from './routes/services.fire-fighting'
+import { Route as ServicesIntegratedFacilityManagementRouteImport } from './routes/services.integrated-facility-management'
+import { Route as ServicesItServicesRouteImport } from './routes/services.it-services'
+import { Route as ServicesNetworkingRouteImport } from './routes/services.networking'
+import { Route as ServicesPosHardwareSoftwareRouteImport } from './routes/services.pos-hardware-software'
+import { Route as ServicesSurveillanceSystemRouteImport } from './routes/services.surveillance-system'
+import { Route as ServicesWebsiteDevelopmentAmcsRouteImport } from './routes/services.website-development-amcs'
 
-const TeamRoute = TeamRouteImport.update({
-  id: '/team',
-  path: '/team',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnersRoute = PartnersRouteImport.update({
-  id: '/partners',
-  path: '/partners',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ClientsRoute = ClientsRouteImport.update({
-  id: '/clients',
-  path: '/clients',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -66,9 +40,29 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ClientsRoute = ClientsRouteImport.update({
+  id: '/clients',
+  path: '/clients',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
@@ -76,55 +70,15 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesWebsiteDevelopmentAmcsRoute =
-  ServicesWebsiteDevelopmentAmcsRouteImport.update({
-    id: '/services/website-development-amcs',
-    path: '/services/website-development-amcs',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesSurveillanceSystemRoute =
-  ServicesSurveillanceSystemRouteImport.update({
-    id: '/services/surveillance-system',
-    path: '/services/surveillance-system',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesPosHardwareSoftwareRoute =
-  ServicesPosHardwareSoftwareRouteImport.update({
-    id: '/services/pos-hardware-software',
-    path: '/services/pos-hardware-software',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesNetworkingRoute = ServicesNetworkingRouteImport.update({
-  id: '/services/networking',
-  path: '/services/networking',
+const ServicesDataCenterSetupRoute = ServicesDataCenterSetupRouteImport.update({
+  id: '/services/data-center-setup',
+  path: '/services/data-center-setup',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesItServicesRoute = ServicesItServicesRouteImport.update({
-  id: '/services/it-services',
-  path: '/services/it-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesIntegratedFacilityManagementRoute =
-  ServicesIntegratedFacilityManagementRouteImport.update({
-    id: '/services/integrated-facility-management',
-    path: '/services/integrated-facility-management',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesFireFightingRoute = ServicesFireFightingRouteImport.update({
-  id: '/services/fire-fighting',
-  path: '/services/fire-fighting',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesEthernetFiberCablingRoute =
-  ServicesEthernetFiberCablingRouteImport.update({
-    id: '/services/ethernet-fiber-cabling',
-    path: '/services/ethernet-fiber-cabling',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesEmsAccessControlRoute =
-  ServicesEmsAccessControlRouteImport.update({
-    id: '/services/ems-access-control',
-    path: '/services/ems-access-control',
+const ServicesDigitalSignageInkDisplaysRoute =
+  ServicesDigitalSignageInkDisplaysRouteImport.update({
+    id: '/services/digital-signage-ink-displays',
+    path: '/services/digital-signage-ink-displays',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ServicesElectricalContractsRoute =
@@ -133,17 +87,57 @@ const ServicesElectricalContractsRoute =
     path: '/services/electrical-contracts',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ServicesDigitalSignageInkDisplaysRoute =
-  ServicesDigitalSignageInkDisplaysRouteImport.update({
-    id: '/services/digital-signage-ink-displays',
-    path: '/services/digital-signage-ink-displays',
+const ServicesEmsAccessControlRoute =
+  ServicesEmsAccessControlRouteImport.update({
+    id: '/services/ems-access-control',
+    path: '/services/ems-access-control',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ServicesDataCenterSetupRoute = ServicesDataCenterSetupRouteImport.update({
-  id: '/services/data-center-setup',
-  path: '/services/data-center-setup',
+const ServicesEthernetFiberCablingRoute =
+  ServicesEthernetFiberCablingRouteImport.update({
+    id: '/services/ethernet-fiber-cabling',
+    path: '/services/ethernet-fiber-cabling',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesFireFightingRoute = ServicesFireFightingRouteImport.update({
+  id: '/services/fire-fighting',
+  path: '/services/fire-fighting',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIntegratedFacilityManagementRoute =
+  ServicesIntegratedFacilityManagementRouteImport.update({
+    id: '/services/integrated-facility-management',
+    path: '/services/integrated-facility-management',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesItServicesRoute = ServicesItServicesRouteImport.update({
+  id: '/services/it-services',
+  path: '/services/it-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesNetworkingRoute = ServicesNetworkingRouteImport.update({
+  id: '/services/networking',
+  path: '/services/networking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesPosHardwareSoftwareRoute =
+  ServicesPosHardwareSoftwareRouteImport.update({
+    id: '/services/pos-hardware-software',
+    path: '/services/pos-hardware-software',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesSurveillanceSystemRoute =
+  ServicesSurveillanceSystemRouteImport.update({
+    id: '/services/surveillance-system',
+    path: '/services/surveillance-system',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesWebsiteDevelopmentAmcsRoute =
+  ServicesWebsiteDevelopmentAmcsRouteImport.update({
+    id: '/services/website-development-amcs',
+    path: '/services/website-development-amcs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -152,7 +146,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/partners': typeof PartnersRoute
   '/projects': typeof ProjectsRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/team': typeof TeamRoute
   '/services/data-center-setup': typeof ServicesDataCenterSetupRoute
   '/services/digital-signage-ink-displays': typeof ServicesDigitalSignageInkDisplaysRoute
@@ -175,7 +168,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/partners': typeof PartnersRoute
   '/projects': typeof ProjectsRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/team': typeof TeamRoute
   '/services/data-center-setup': typeof ServicesDataCenterSetupRoute
   '/services/digital-signage-ink-displays': typeof ServicesDigitalSignageInkDisplaysRoute
@@ -199,7 +191,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/partners': typeof PartnersRoute
   '/projects': typeof ProjectsRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/team': typeof TeamRoute
   '/services/data-center-setup': typeof ServicesDataCenterSetupRoute
   '/services/digital-signage-ink-displays': typeof ServicesDigitalSignageInkDisplaysRoute
@@ -224,7 +215,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/partners'
     | '/projects'
-    | '/sitemap.xml'
     | '/team'
     | '/services/data-center-setup'
     | '/services/digital-signage-ink-displays'
@@ -247,7 +237,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/partners'
     | '/projects'
-    | '/sitemap.xml'
     | '/team'
     | '/services/data-center-setup'
     | '/services/digital-signage-ink-displays'
@@ -270,7 +259,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/partners'
     | '/projects'
-    | '/sitemap.xml'
     | '/team'
     | '/services/data-center-setup'
     | '/services/digital-signage-ink-displays'
@@ -294,7 +282,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PartnersRoute: typeof PartnersRoute
   ProjectsRoute: typeof ProjectsRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TeamRoute: typeof TeamRoute
   ServicesDataCenterSetupRoute: typeof ServicesDataCenterSetupRoute
   ServicesDigitalSignageInkDisplaysRoute: typeof ServicesDigitalSignageInkDisplaysRoute
@@ -313,46 +300,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/team': {
-      id: '/team'
-      path: '/team'
-      fullPath: '/team'
-      preLoaderRoute: typeof TeamRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partners': {
-      id: '/partners'
-      path: '/partners'
-      fullPath: '/partners'
-      preLoaderRoute: typeof PartnersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clients': {
-      id: '/clients'
-      path: '/clients'
-      fullPath: '/clients'
-      preLoaderRoute: typeof ClientsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -362,11 +314,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/clients': {
+      id: '/clients'
+      path: '/clients'
+      fullPath: '/clients'
+      preLoaderRoute: typeof ClientsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -376,74 +356,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/website-development-amcs': {
-      id: '/services/website-development-amcs'
-      path: '/services/website-development-amcs'
-      fullPath: '/services/website-development-amcs'
-      preLoaderRoute: typeof ServicesWebsiteDevelopmentAmcsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/surveillance-system': {
-      id: '/services/surveillance-system'
-      path: '/services/surveillance-system'
-      fullPath: '/services/surveillance-system'
-      preLoaderRoute: typeof ServicesSurveillanceSystemRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/pos-hardware-software': {
-      id: '/services/pos-hardware-software'
-      path: '/services/pos-hardware-software'
-      fullPath: '/services/pos-hardware-software'
-      preLoaderRoute: typeof ServicesPosHardwareSoftwareRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/networking': {
-      id: '/services/networking'
-      path: '/services/networking'
-      fullPath: '/services/networking'
-      preLoaderRoute: typeof ServicesNetworkingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/it-services': {
-      id: '/services/it-services'
-      path: '/services/it-services'
-      fullPath: '/services/it-services'
-      preLoaderRoute: typeof ServicesItServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/integrated-facility-management': {
-      id: '/services/integrated-facility-management'
-      path: '/services/integrated-facility-management'
-      fullPath: '/services/integrated-facility-management'
-      preLoaderRoute: typeof ServicesIntegratedFacilityManagementRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/fire-fighting': {
-      id: '/services/fire-fighting'
-      path: '/services/fire-fighting'
-      fullPath: '/services/fire-fighting'
-      preLoaderRoute: typeof ServicesFireFightingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/ethernet-fiber-cabling': {
-      id: '/services/ethernet-fiber-cabling'
-      path: '/services/ethernet-fiber-cabling'
-      fullPath: '/services/ethernet-fiber-cabling'
-      preLoaderRoute: typeof ServicesEthernetFiberCablingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/ems-access-control': {
-      id: '/services/ems-access-control'
-      path: '/services/ems-access-control'
-      fullPath: '/services/ems-access-control'
-      preLoaderRoute: typeof ServicesEmsAccessControlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/electrical-contracts': {
-      id: '/services/electrical-contracts'
-      path: '/services/electrical-contracts'
-      fullPath: '/services/electrical-contracts'
-      preLoaderRoute: typeof ServicesElectricalContractsRouteImport
+    '/services/data-center-setup': {
+      id: '/services/data-center-setup'
+      path: '/services/data-center-setup'
+      fullPath: '/services/data-center-setup'
+      preLoaderRoute: typeof ServicesDataCenterSetupRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/digital-signage-ink-displays': {
@@ -453,11 +370,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesDigitalSignageInkDisplaysRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/data-center-setup': {
-      id: '/services/data-center-setup'
-      path: '/services/data-center-setup'
-      fullPath: '/services/data-center-setup'
-      preLoaderRoute: typeof ServicesDataCenterSetupRouteImport
+    '/services/electrical-contracts': {
+      id: '/services/electrical-contracts'
+      path: '/services/electrical-contracts'
+      fullPath: '/services/electrical-contracts'
+      preLoaderRoute: typeof ServicesElectricalContractsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ems-access-control': {
+      id: '/services/ems-access-control'
+      path: '/services/ems-access-control'
+      fullPath: '/services/ems-access-control'
+      preLoaderRoute: typeof ServicesEmsAccessControlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ethernet-fiber-cabling': {
+      id: '/services/ethernet-fiber-cabling'
+      path: '/services/ethernet-fiber-cabling'
+      fullPath: '/services/ethernet-fiber-cabling'
+      preLoaderRoute: typeof ServicesEthernetFiberCablingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/fire-fighting': {
+      id: '/services/fire-fighting'
+      path: '/services/fire-fighting'
+      fullPath: '/services/fire-fighting'
+      preLoaderRoute: typeof ServicesFireFightingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/integrated-facility-management': {
+      id: '/services/integrated-facility-management'
+      path: '/services/integrated-facility-management'
+      fullPath: '/services/integrated-facility-management'
+      preLoaderRoute: typeof ServicesIntegratedFacilityManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/it-services': {
+      id: '/services/it-services'
+      path: '/services/it-services'
+      fullPath: '/services/it-services'
+      preLoaderRoute: typeof ServicesItServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/networking': {
+      id: '/services/networking'
+      path: '/services/networking'
+      fullPath: '/services/networking'
+      preLoaderRoute: typeof ServicesNetworkingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/pos-hardware-software': {
+      id: '/services/pos-hardware-software'
+      path: '/services/pos-hardware-software'
+      fullPath: '/services/pos-hardware-software'
+      preLoaderRoute: typeof ServicesPosHardwareSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/surveillance-system': {
+      id: '/services/surveillance-system'
+      path: '/services/surveillance-system'
+      fullPath: '/services/surveillance-system'
+      preLoaderRoute: typeof ServicesSurveillanceSystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/website-development-amcs': {
+      id: '/services/website-development-amcs'
+      path: '/services/website-development-amcs'
+      fullPath: '/services/website-development-amcs'
+      preLoaderRoute: typeof ServicesWebsiteDevelopmentAmcsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -470,7 +450,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PartnersRoute: PartnersRoute,
   ProjectsRoute: ProjectsRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TeamRoute: TeamRoute,
   ServicesDataCenterSetupRoute: ServicesDataCenterSetupRoute,
   ServicesDigitalSignageInkDisplaysRoute:
@@ -491,13 +470,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

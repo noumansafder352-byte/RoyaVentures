@@ -34,12 +34,12 @@ import ifmMeeting from "@/assets/ifm/ifm-meeting.jpg";
 import ifmDocuments from "@/assets/ifm/ifm-documents.jpg";
 import ifmPlatform from "@/assets/ifm/ifm-platform.jpg";
 import ifmMonitoring from "@/assets/ifm/ifm-monitoring.jpg";
-import logoChalhoub from "@/assets/clients/corporate/chalhoub.png.asset.json";
-import logoSephora from "@/assets/clients/corporate/sephora-2.png.asset.json";
-import logoNesma from "@/assets/clients/corporate/nesma-telecom.png.asset.json";
-import shot1 from "@/assets/projects/chalhoub/elv-system.webp.asset.json";
-import shot2 from "@/assets/projects/nujaima/network-cable-labeling.jpg.asset.json";
-import shot3 from "@/assets/projects/warehouse/warehouse-cctv.jpg.asset.json";
+import logoChalhoub from "@/assets/clients/corporate/chalhoub.png";
+import logoSephora from "@/assets/clients/corporate/sephora-2.png";
+import logoNesma from "@/assets/clients/corporate/nesma-telecom.png";
+import shot1 from "@/assets/projects/chalhoub/elv-system.png";
+import shot2 from "@/assets/projects/nujaima/network-cable-labeling.png";
+import shot3 from "@/assets/projects/warehouse/warehouse-cctv.png";
 
 export const Route = createFileRoute("/services/integrated-facility-management")({
   head: () => ({
@@ -67,7 +67,12 @@ export const Route = createFileRoute("/services/integrated-facility-management")
   component: IFMPage,
 });
 
-const TRUST = ["10+ Years in the Field", "Certified Engineers", "All Project Sizes", "Saudi Arabia & Beyond"];
+const TRUST = [
+  "10+ Years in the Field",
+  "Certified Engineers",
+  "All Project Sizes",
+  "Saudi Arabia & Beyond",
+];
 
 const OFFERINGS = [
   {
@@ -198,7 +203,8 @@ function IFMPage() {
         eyebrow="05 · Practice"
         title={
           <>
-            Integrated Facility Management in <span className="text-[var(--gold)]">Saudi Arabia</span>
+            Integrated Facility Management in{" "}
+            <span className="text-[var(--gold)]">Saudi Arabia</span>
           </>
         }
         subtitle="Integrated Facility Management (IFM) brings together all critical front-of-house and operational technologies into one seamless, intelligent ecosystem."
@@ -233,11 +239,12 @@ function IFMPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-base md:text-[17px] leading-[1.85] text-muted-foreground lg:pt-6">
-                Managing visitor flow, access, parking, meeting spaces, and operational systems through separate
-                platforms can create unnecessary complexity and limited visibility. What you want is a connected
-                facility where critical front-of-house and operational technologies work together through one
-                intelligent ecosystem. Roya Ventures integrates the technologies that keep your facilities secure,
-                efficient, connected, and easier to manage.
+                Managing visitor flow, access, parking, meeting spaces, and operational systems
+                through separate platforms can create unnecessary complexity and limited visibility.
+                What you want is a connected facility where critical front-of-house and operational
+                technologies work together through one intelligent ecosystem. Roya Ventures
+                integrates the technologies that keep your facilities secure, efficient, connected,
+                and easier to manage.
               </p>
             </Reveal>
           </div>
@@ -287,7 +294,9 @@ function IFMPage() {
                       {o.title}
                     </h3>
                     <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-4">
-                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">{o.text}</p>
+                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">
+                        {o.text}
+                      </p>
                     </div>
                     <div className="mt-6 h-px w-10 bg-[var(--gold)] transition-all duration-500 group-hover:w-24" />
                   </div>
@@ -316,7 +325,11 @@ function IFMPage() {
         <div className="container-px mx-auto">
           <SectionHeading
             eyebrow="Why us"
-            title={<>Why Clients Choose Roya Ventures as Their Integrated Facility Management Provider?</>}
+            title={
+              <>
+                Why Clients Choose Roya Ventures as Their Integrated Facility Management Provider?
+              </>
+            }
             description="Here's what makes us different."
             invert
           />
@@ -338,15 +351,23 @@ function IFMPage() {
                     <p className="font-display text-4xl md:text-5xl font-semibold tracking-[-0.03em] text-[var(--gold)]">
                       10+
                     </p>
-                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">Years in the field</p>
+                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">
+                      Years in the field
+                    </p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-5">
                   {[
-                    { src: ifmVisitor, alt: "Digital visitor management kiosk in a corporate lobby" },
+                    {
+                      src: ifmVisitor,
+                      alt: "Digital visitor management kiosk in a corporate lobby",
+                    },
                     { src: ifmParking, alt: "Smart parking and vehicle access control gate" },
                   ].map((im) => (
-                    <div key={im.alt} className="group relative overflow-hidden rounded-2xl border border-white/10">
+                    <div
+                      key={im.alt}
+                      className="group relative overflow-hidden rounded-2xl border border-white/10"
+                    >
                       <img
                         src={im.src}
                         alt={im.alt}
@@ -374,7 +395,9 @@ function IFMPage() {
                       className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-[var(--gold)]/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     />
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">{w.title}</h3>
+                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">
+                        {w.title}
+                      </h3>
                       <div className="mt-4 h-px w-10 bg-[var(--gold)]/70 transition-all duration-500 group-hover:w-20" />
                     </div>
                     <span className="shrink-0 font-display text-2xl md:text-3xl font-semibold tracking-tight text-transparent [-webkit-text-stroke:1.5px_var(--gold)] opacity-50 transition-all duration-500 group-hover:opacity-100">
@@ -466,10 +489,14 @@ function IFMPage() {
                           </h3>
                           <div
                             className={`grid transition-all duration-500 ease-out ${
-                              isActive ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"
+                              isActive
+                                ? "grid-rows-[1fr] opacity-100 mt-3"
+                                : "grid-rows-[0fr] opacity-0"
                             }`}
                           >
-                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">{text}</p>
+                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">
+                              {text}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -498,7 +525,9 @@ function IFMPage() {
                     <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-[var(--gold)]/35 text-[var(--gold)] transition-colors duration-500 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)]">
                       <Icon className="h-5 w-5" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">{ind.title}</h3>
+                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">
+                      {ind.title}
+                    </h3>
                   </div>
                 </Reveal>
               );
@@ -515,8 +544,9 @@ function IFMPage() {
               <p className="gold-rule">Track record</p>
               <h2 className="heading-lg mt-6">Trusted Across the Region</h2>
               <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-muted-foreground">
-                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted Roya Ventures to
-                deliver technology solutions that improve operational efficiency, security, and user experience.
+                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted
+                Roya Ventures to deliver technology solutions that improve operational efficiency,
+                security, and user experience.
               </p>
               <div className="mt-8 gold-divider" />
               <Reveal>
@@ -527,7 +557,7 @@ function IFMPage() {
                       className="grid place-items-center rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] p-6 shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/40"
                     >
                       <img
-                        src={logo.url}
+                        src={logo}
                         alt="Client logo"
                         className="h-10 md:h-12 w-auto object-contain opacity-80 transition-opacity duration-500 hover:opacity-100"
                       />
@@ -544,8 +574,8 @@ function IFMPage() {
                   Corporate Headquarters, Riyadh
                 </h3>
                 <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">
-                  Integrated visitor management, smart access control, meeting-room scheduling, and facility technology
-                  across a multi-floor corporate environment.
+                  Integrated visitor management, smart access control, meeting-room scheduling, and
+                  facility technology across a multi-floor corporate environment.
                 </p>
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   {[shot1, shot2, shot3].map((img, i) => (
@@ -554,7 +584,7 @@ function IFMPage() {
                       className="group overflow-hidden rounded-xl border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/45 hover:shadow-[var(--shadow-elegant)]"
                     >
                       <img
-                        src={img.url}
+                        src={img}
                         alt="Completed Roya Ventures project"
                         loading="lazy"
                         className="h-20 sm:h-24 w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -608,7 +638,9 @@ function IFMPage() {
                   </AccordionPrimitive.Header>
                   <AccordionContent className="px-5 md:px-8 pb-7 pt-0">
                     <div className="gold-divider mb-5" />
-                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">{a}</p>
+                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">
+                      {a}
+                    </p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -630,9 +662,9 @@ function IFMPage() {
                   Ready to Make Your Facility Smarter?
                 </h2>
                 <p className="mt-5 mx-auto max-w-2xl text-white/75 text-base md:text-lg leading-relaxed font-light">
-                  Roya Ventures brings your critical facility technologies together into one intelligent ecosystem
-                  designed to improve security, efficiency, visibility, and the experience of everyone who uses your
-                  facility.
+                  Roya Ventures brings your critical facility technologies together into one
+                  intelligent ecosystem designed to improve security, efficiency, visibility, and
+                  the experience of everyone who uses your facility.
                 </p>
                 <div className="mt-10 flex justify-center">
                   <Link to="/contact" className="btn-primary btn-on-dark">

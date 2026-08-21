@@ -7,7 +7,7 @@ import { PartnersMarquee } from "@/components/site/PartnersMarquee";
 import { Reveal } from "@/components/site/Reveal";
 import { Target, Eye, Gem, Users, Globe2, Scale, Lightbulb, Award } from "lucide-react";
 import heroAbout from "@/assets/hero-about.jpg";
-import aboutMission from "@/assets/our-mission.png.asset.json";
+import aboutMission from "@/assets/our-mission.png";
 import aboutVision from "@/assets/about-vision.jpg";
 import featureLeadership from "@/assets/feature-leadership.jpg";
 
@@ -15,30 +15,65 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Roya Ventures" },
-      { name: "description", content: "Discover the people, principles and history behind Roya Ventures, an international corporate advisory firm built around enduring counsel." },
+      {
+        name: "description",
+        content:
+          "Discover the people, principles and history behind Roya Ventures, an international corporate advisory firm built around enduring counsel.",
+      },
       { property: "og:title", content: "About Roya Ventures" },
-      { property: "og:description", content: "An international advisory firm built around enduring counsel." },
+      {
+        property: "og:description",
+        content: "An international advisory firm built around enduring counsel.",
+      },
     ],
   }),
   component: AboutPage,
 });
 
 const VALUES = [
-  { icon: Scale, title: "Integrity", text: "Every recommendation is grounded in evidence and bound by an unwavering ethical standard." },
-  { icon: Gem, title: "Excellence", text: "We commit to craftsmanship in the work — from analysis to delivery — without compromise." },
-  { icon: Users, title: "Partnership", text: "We operate alongside our clients, not above them, with shared accountability for the outcome." },
-  { icon: Lightbulb, title: "Insight", text: "Original perspective drawn from a rare blend of operating, advisory and capital expertise." },
-  { icon: Globe2, title: "Global Outlook", text: "A multinational team that thinks in cross-border systems and local realities at once." },
-  { icon: Award, title: "Discretion", text: "Confidentiality is the foundation of our practice. Trust is the only currency that compounds." },
+  {
+    icon: Scale,
+    title: "Integrity",
+    text: "Every recommendation is grounded in evidence and bound by an unwavering ethical standard.",
+  },
+  {
+    icon: Gem,
+    title: "Excellence",
+    text: "We commit to craftsmanship in the work — from analysis to delivery — without compromise.",
+  },
+  {
+    icon: Users,
+    title: "Partnership",
+    text: "We operate alongside our clients, not above them, with shared accountability for the outcome.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Insight",
+    text: "Original perspective drawn from a rare blend of operating, advisory and capital expertise.",
+  },
+  {
+    icon: Globe2,
+    title: "Global Outlook",
+    text: "A multinational team that thinks in cross-border systems and local realities at once.",
+  },
+  {
+    icon: Award,
+    title: "Discretion",
+    text: "Confidentiality is the foundation of our practice. Trust is the only currency that compounds.",
+  },
 ];
-
 
 function AboutPage() {
   return (
     <SiteLayout transparentHeader>
       <PageHero
         eyebrow="About the firm"
-        title={<>Counsel measured in <span className="text-[var(--gold)]">decades</span>, not deliverables.</>}
+        title={
+          <>
+            Counsel measured in <span className="text-[var(--gold)]">decades</span>, not
+            deliverables.
+          </>
+        }
         subtitle="Roya Ventures is an international advisory firm built around senior partners and an enduring commitment to the leaders we serve."
         image={heroAbout}
       />
@@ -50,7 +85,10 @@ function AboutPage() {
           <div className="lg:col-span-5">
             <Reveal>
               <p className="gold-rule">Company overview</p>
-              <h2 className="heading-sub-lg mt-6">A house of advisors, operators and <em className="not-italic text-[var(--gold)]">capital specialists.</em></h2>
+              <h2 className="heading-sub-lg mt-6">
+                A house of advisors, operators and{" "}
+                <em className="not-italic text-[var(--gold)]">capital specialists.</em>
+              </h2>
               <div className="mt-8 gold-divider" />
             </Reveal>
           </div>
@@ -58,12 +96,12 @@ function AboutPage() {
             <p className="text-base text-muted-foreground leading-relaxed">
               For more than 8 Years, Roya Ventures has worked alongside boards, founders and
               institutional investors to address the questions that define long-term value.
-
             </p>
             <p className="text-base text-muted-foreground leading-relaxed">
-              Our partners have led mandates across more than forty markets, advising on transactions
-              and programmes that have shaped industries. The firm remains independent by design,
-              ensuring every recommendation is made in the singular interest of the client.
+              Our partners have led mandates across more than forty markets, advising on
+              transactions and programmes that have shaped industries. The firm remains independent
+              by design, ensuring every recommendation is made in the singular interest of the
+              client.
             </p>
           </Reveal>
         </div>
@@ -93,7 +131,9 @@ function AboutPage() {
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="h-px w-12 bg-[var(--gold)]" />
-                <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">A.H. Hart, Managing Partner</p>
+                <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">
+                  A.H. Hart, Managing Partner
+                </p>
               </div>
             </div>
           </Reveal>
@@ -101,14 +141,24 @@ function AboutPage() {
       </section>
 
       {/* Mission & Vision — premium image-content split */}
-      <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
+      <section
+        className="section-y relative overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
         <div className="container-px mx-auto space-y-28 md:space-y-36">
           <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-20">
             <Reveal className="lg:col-span-6">
               <div className="relative">
                 <div className="absolute -inset-4 border border-[var(--gold)]/30 rounded-2xl -z-10" />
                 <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)]">
-                  <img src={aboutMission.url} alt="Strategic review" width={1400} height={1000} loading="lazy" className="w-full aspect-[4/3] object-cover transition-transform duration-[1800ms] hover:scale-105" />
+                  <img
+                    src={aboutMission}
+                    alt="Strategic review"
+                    width={1400}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-[1800ms] hover:scale-105"
+                  />
                 </div>
               </div>
             </Reveal>
@@ -119,12 +169,15 @@ function AboutPage() {
                 </div>
                 <p className="eyebrow text-[var(--gold)]">Our Mission</p>
               </div>
-              <h3 className="heading-lg mt-7">To equip leaders with the clarity to make <em className="not-italic text-[var(--gold)]">consequential decisions.</em></h3>
+              <h3 className="heading-lg mt-7">
+                To equip leaders with the clarity to make{" "}
+                <em className="not-italic text-[var(--gold)]">consequential decisions.</em>
+              </h3>
               <div className="mt-7 gold-divider" />
               <p className="mt-7 text-lg leading-[1.75] text-muted-foreground font-light">
                 We exist to translate complexity into conviction — distilling market dynamics,
-                organisational realities and strategic ambitions into decisions our clients can
-                make with confidence and conscience.
+                organisational realities and strategic ambitions into decisions our clients can make
+                with confidence and conscience.
               </p>
             </Reveal>
           </div>
@@ -134,7 +187,14 @@ function AboutPage() {
               <div className="relative">
                 <div className="absolute -inset-4 border border-[var(--gold)]/30 rounded-2xl -z-10" />
                 <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)]">
-                  <img src={aboutVision} alt="Modern boardroom interior" width={1400} height={1000} loading="lazy" className="w-full aspect-[4/3] object-cover transition-transform duration-[1800ms] hover:scale-105" />
+                  <img
+                    src={aboutVision}
+                    alt="Modern boardroom interior"
+                    width={1400}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-[1800ms] hover:scale-105"
+                  />
                 </div>
               </div>
             </Reveal>
@@ -145,7 +205,10 @@ function AboutPage() {
                 </div>
                 <p className="eyebrow text-[var(--gold)]">Our Vision</p>
               </div>
-              <h3 className="heading-lg mt-7">To be the most trusted advisory partner for <em className="not-italic text-[var(--gold)]">ambitious enterprises worldwide.</em></h3>
+              <h3 className="heading-lg mt-7">
+                To be the most trusted advisory partner for{" "}
+                <em className="not-italic text-[var(--gold)]">ambitious enterprises worldwide.</em>
+              </h3>
               <div className="mt-7 gold-divider" />
               <p className="mt-7 text-lg leading-[1.75] text-muted-foreground font-light">
                 A firm defined by the calibre of its people, the discretion of its practice and the
@@ -158,14 +221,27 @@ function AboutPage() {
       </section>
 
       {/* Values — premium image-led card grid */}
-      <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
+      <section
+        className="section-y relative overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
         <div className="absolute inset-0 -z-10 bg-radial-gold opacity-60" />
-        <div aria-hidden className="pointer-events-none absolute -top-32 -right-20 h-80 w-80 rounded-full border border-[var(--gold)]/15" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-20 h-80 w-80 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--emerald-deep)_15%,transparent),transparent_65%)] blur-3xl" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-32 -right-20 h-80 w-80 rounded-full border border-[var(--gold)]/15"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-24 -left-20 h-80 w-80 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--emerald-deep)_15%,transparent),transparent_65%)] blur-3xl"
+        />
         <div className="container-px mx-auto relative">
           <SectionHeading
             eyebrow="Core values"
-            title={<>Six principles. <em className="not-italic text-[var(--gold)]">One standard.</em></>}
+            title={
+              <>
+                Six principles. <em className="not-italic text-[var(--gold)]">One standard.</em>
+              </>
+            }
             description="The values that anchor every engagement, every conversation and every recommendation."
           />
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -176,7 +252,10 @@ function AboutPage() {
                   data-cursor="hover"
                 >
                   {/* Corner gold glow on hover */}
-                  <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--gold)_35%,transparent),transparent_65%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--gold)_35%,transparent),transparent_65%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                  />
 
                   {/* Decorative visual header */}
                   <div className="relative h-44 overflow-hidden">
@@ -194,7 +273,10 @@ function AboutPage() {
                       }}
                     />
                     {/* Floating gold ring */}
-                    <div aria-hidden className="absolute -top-10 -left-10 h-40 w-40 rounded-full border border-[var(--gold)]/25" />
+                    <div
+                      aria-hidden
+                      className="absolute -top-10 -left-10 h-40 w-40 rounded-full border border-[var(--gold)]/25"
+                    />
                     {/* Large watermark icon */}
                     <Icon
                       aria-hidden

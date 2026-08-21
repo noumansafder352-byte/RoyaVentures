@@ -1,8 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
-import { contactSchema } from "@/lib/contact-schema";
-import { sendContactMessage } from "@/lib/contact.functions";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -15,10 +12,14 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — Roya Ventures" },
       {
         name: "description",
-        content: "Reach Roya Ventures' partners directly. Begin a confidential conversation about your mandate.",
+        content:
+          "Reach Roya Ventures' partners directly. Begin a confidential conversation about your mandate.",
       },
       { property: "og:title", content: "Contact — Roya Ventures" },
-      { property: "og:description", content: "Begin a confidential conversation with our partners." },
+      {
+        property: "og:description",
+        content: "Begin a confidential conversation with our partners.",
+      },
     ],
   }),
   component: ContactPage,
@@ -35,37 +36,12 @@ const DIRECTORY: { name: string; phone?: string; email: string }[] = [
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const send = useServerFn(sendContactMessage);
 
-  const onSubmit = async (e: FormEvent) => {
+  const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const raw = Object.fromEntries(new FormData(form).entries());
-
-    const parsed = contactSchema.safeParse(raw);
-    if (!parsed.success) {
-      setError(parsed.error.issues[0]?.message ?? "Please check the form and try again.");
-      return;
-    }
-
-    setError(null);
-    setSending(true);
-    try {
-      const result = await send({ data: parsed.data });
-      if (!result.ok) {
-        setError(result.error);
-        return;
-      }
-      setSent(true);
-      setTimeout(() => setSent(false), 4500);
-      form.reset();
-    } catch {
-      setError("We couldn't send your message. Please try again.");
-    } finally {
-      setSending(false);
-    }
+    setSent(true);
+    setTimeout(() => setSent(false), 4500);
+    (e.target as HTMLFormElement).reset();
   };
 
   return (
@@ -104,7 +80,8 @@ function ContactPage() {
                     Send a <em className="not-italic text-[var(--gold)]">message.</em>
                   </h2>
                   <p className="mt-4 text-muted-foreground leading-relaxed max-w-xl">
-                    Tell us briefly about your enquiry. Submissions are treated in strict confidence.
+                    Tell us briefly about your enquiry. Submissions are treated in strict
+                    confidence.
                   </p>
                   <div className="mt-6 h-px w-16 bg-[var(--gold)]" />
 
@@ -131,17 +108,11 @@ function ContactPage() {
                         className="w-full rounded-xl border border-[color-mix(in_oklab,var(--navy)_12%,transparent)] bg-[var(--ivory)]/40 px-4 py-3.5 text-[15px] text-[var(--navy)] placeholder:text-muted-foreground/60 transition-all duration-300 hover:border-[color-mix(in_oklab,var(--navy)_22%,transparent)] focus:border-[var(--gold)] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[var(--gold)]/10 resize-none"
                       />
                     </div>
-                    {error && (
-                      <p role="alert" className="text-sm text-red-700">
-                        {error}
-                      </p>
-                    )}
                     <div className="pt-3 flex items-center gap-5">
                       <button
                         type="submit"
-                        disabled={sending}
                         data-cursor="hover"
-                        className="group inline-flex items-center gap-3 rounded-full bg-[var(--gold)] text-[var(--navy)] px-9 py-4 text-[13px] font-bold uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[var(--navy)] hover:text-white shadow-[0_15px_40px_-15px_color-mix(in_oklab,var(--gold)_60%,transparent)] hover:shadow-[0_18px_45px_-12px_color-mix(in_oklab,var(--navy)_50%,transparent)] hover:-translate-y-2 disabled:opacity-70 disabled:pointer-events-none"
+                        className="group inline-flex items-center gap-3 rounded-full bg-[var(--gold)] text-[var(--navy)] px-9 py-4 text-[13px] font-bold uppercase tracking-[0.18em] transition-all duration-300 hover:bg-[var(--navy)] hover:text-white shadow-[0_15px_40px_-15px_color-mix(in_oklab,var(--gold)_60%,transparent)] hover:shadow-[0_18px_45px_-12px_color-mix(in_oklab,var(--navy)_50%,transparent)] hover:-translate-y-2"
                       >
                         {sent ? (
                           <>
@@ -150,7 +121,7 @@ function ContactPage() {
                           </>
                         ) : (
                           <>
-                            {sending ? "Sending" : "Send message"}{" "}
+                            Send message{" "}
                             <Send className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
                           </>
                         )}
@@ -170,7 +141,9 @@ function ContactPage() {
                 {/* Layered backdrop */}
                 <div
                   className="absolute inset-0 opacity-90"
-                  style={{ background: "linear-gradient(150deg, var(--navy) 0%, var(--emerald-deep) 100%)" }}
+                  style={{
+                    background: "linear-gradient(150deg, var(--navy) 0%, var(--emerald-deep) 100%)",
+                  }}
                 />
                 <div className="absolute -top-16 -right-16 h-56 w-56 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--gold)_25%,transparent),transparent_70%)]" />
                 <div className="absolute inset-0 bg-noise opacity-[0.06]" />
@@ -191,7 +164,9 @@ function ContactPage() {
                       <ul className="mt-3 divide-y divide-white/10">
                         {DIRECTORY.map((p) => (
                           <li key={p.name} className="py-4 first:pt-2">
-                            <div className="text-[15px] font-semibold tracking-wide text-white">{p.name}</div>
+                            <div className="text-[15px] font-semibold tracking-wide text-white">
+                              {p.name}
+                            </div>
                             <div className="mt-2 space-y-1.5">
                               {p.phone && (
                                 <a
@@ -253,7 +228,15 @@ function Field({
   );
 }
 
-function InfoItem({ icon: Icon, label, children }: { icon: typeof Mail; label: string; children: React.ReactNode }) {
+function InfoItem({
+  icon: Icon,
+  label,
+  children,
+}: {
+  icon: typeof Mail;
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <li className="group grid grid-cols-[auto_1fr] gap-5">
       <div className="relative shrink-0">

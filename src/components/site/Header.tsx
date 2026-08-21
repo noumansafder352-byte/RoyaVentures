@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/roya-logo.png.asset.json";
+import logo from "@/assets/roya-logo.png";
 
 const NETWORK_LINKS = [
   { to: "/clients", label: "Clients" },
@@ -72,9 +72,14 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
       ].join(" ")}
     >
       <div className="container-px mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3 md:py-4">
-        <Link to="/" className="flex items-center gap-3 shrink-0" aria-label="Roya Ventures — home" data-cursor="hover">
+        <Link
+          to="/"
+          className="flex items-center gap-3 shrink-0"
+          aria-label="Roya Ventures — home"
+          data-cursor="hover"
+        >
           <img
-            src={logo.url}
+            src={logo}
             alt="Roya Ventures"
             width={240}
             height={64}
@@ -117,7 +122,12 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
                     />
                     <span
                       aria-hidden
-                      className={[underlineClasses, active ? "w-7 opacity-100" : "w-0 opacity-0 group-hover:w-7 group-hover:opacity-100"].join(" ")}
+                      className={[
+                        underlineClasses,
+                        active
+                          ? "w-7 opacity-100"
+                          : "w-0 opacity-0 group-hover:w-7 group-hover:opacity-100",
+                      ].join(" ")}
                     />
                     <span aria-hidden className={underlineGlowClasses} />
                   </button>
@@ -125,7 +135,9 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
                   <div
                     className={[
                       "absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
-                      networkOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none",
+                      networkOpen
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "opacity-0 -translate-y-2 pointer-events-none",
                     ].join(" ")}
                   >
                     <div
@@ -177,7 +189,12 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
                 </span>
                 <span
                   aria-hidden
-                  className={[underlineClasses, active ? "w-7 opacity-100" : "w-0 opacity-0 group-hover:w-7 group-hover:opacity-100"].join(" ")}
+                  className={[
+                    underlineClasses,
+                    active
+                      ? "w-7 opacity-100"
+                      : "w-0 opacity-0 group-hover:w-7 group-hover:opacity-100",
+                  ].join(" ")}
                 />
                 <span aria-hidden className={underlineGlowClasses} />
               </Link>
@@ -216,7 +233,10 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
             if ("type" in item) {
               const active = isNetworkActive;
               return (
-                <div key={item.label} className="flex flex-col border-b border-white/5 last:border-0">
+                <div
+                  key={item.label}
+                  className="flex flex-col border-b border-white/5 last:border-0"
+                >
                   <button
                     type="button"
                     aria-expanded={mobileNetworkOpen}
@@ -248,9 +268,11 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
                           <Link
                             key={link.to}
                             to={link.to}
-                              className={[
-                                "py-2.5 text-[12px] font-medium tracking-[0.18em] border-b border-white/5 last:border-0",
-                              linkActive ? "text-[var(--gold)]" : "text-white/75 hover:text-[var(--gold)]",
+                            className={[
+                              "py-2.5 text-[12px] font-medium tracking-[0.18em] border-b border-white/5 last:border-0",
+                              linkActive
+                                ? "text-[var(--gold)]"
+                                : "text-white/75 hover:text-[var(--gold)]",
                             ].join(" ")}
                           >
                             {link.label}
@@ -278,7 +300,9 @@ export function Header({ transparentOverHero = false }: { transparentOverHero?: 
               </Link>
             );
           })}
-          <Link to="/contact" className="btn-primary btn-on-dark mt-6 justify-center">Get in Touch</Link>
+          <Link to="/contact" className="btn-primary btn-on-dark mt-6 justify-center">
+            Get in Touch
+          </Link>
         </nav>
       </div>
     </header>

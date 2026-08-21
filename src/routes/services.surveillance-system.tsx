@@ -33,12 +33,12 @@ import survAi from "@/assets/surv/surv-ai-analytics.jpg";
 import survPerimeter from "@/assets/surv/surv-perimeter.jpg";
 import survRemote from "@/assets/surv/surv-remote.jpg";
 import survEngineer from "@/assets/surv/surv-engineer.jpg";
-import logoChalhoub from "@/assets/clients/corporate/chalhoub.png.asset.json";
-import logoSephora from "@/assets/clients/corporate/sephora-2.png.asset.json";
-import logoDominos from "@/assets/clients/hospitality/dominos.png.asset.json";
-import shotWarehouse from "@/assets/projects/warehouse/warehouse-cctv.jpg.asset.json";
-import shotWarehouse2 from "@/assets/projects/warehouse/warehouse-racking.jpg.asset.json";
-import shotDominos from "@/assets/projects/dominos/dominos-hikvision.jpg.asset.json";
+import logoChalhoub from "@/assets/clients/corporate/chalhoub.png";
+import logoSephora from "@/assets/clients/corporate/sephora-2.png";
+import logoDominos from "@/assets/clients/hospitality/dominos.png";
+import shotWarehouse from "@/assets/projects/warehouse/warehouse-cctv.png";
+import shotWarehouse2 from "@/assets/projects/warehouse/warehouse-racking.png";
+import shotDominos from "@/assets/projects/dominos/dominos-hikvision.png";
 
 export const Route = createFileRoute("/services/surveillance-system")({
   head: () => ({
@@ -52,7 +52,8 @@ export const Route = createFileRoute("/services/surveillance-system")({
       { property: "og:title", content: "Surveillance System in Saudi Arabia — Roya Ventures" },
       {
         property: "og:description",
-        content: "Advanced CCTV and AI video analytics systems designed, installed and supported across Saudi Arabia.",
+        content:
+          "Advanced CCTV and AI video analytics systems designed, installed and supported across Saudi Arabia.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -61,7 +62,12 @@ export const Route = createFileRoute("/services/surveillance-system")({
   component: SurveillancePage,
 });
 
-const TRUST = ["10+ Years in the Field", "Certified Engineers", "All Project Sizes", "Saudi Arabia & Beyond"];
+const TRUST = [
+  "10+ Years in the Field",
+  "Certified Engineers",
+  "All Project Sizes",
+  "Saudi Arabia & Beyond",
+];
 
 const OFFERINGS = [
   {
@@ -214,9 +220,10 @@ function SurveillancePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-base md:text-[17px] leading-[1.85] text-muted-foreground lg:pt-6">
-                If you're seeing unresolved security breaches and unhelpful footage, it's usually due to an outdated,
-                unstable camera setup with blind spots. What you want is clear, real-time threat detection with 24/7
-                intelligent perimeter visibility. Here at Roya Ventures how you get it.
+                If you're seeing unresolved security breaches and unhelpful footage, it's usually
+                due to an outdated, unstable camera setup with blind spots. What you want is clear,
+                real-time threat detection with 24/7 intelligent perimeter visibility. Here at Roya
+                Ventures how you get it.
               </p>
             </Reveal>
           </div>
@@ -266,7 +273,9 @@ function SurveillancePage() {
                       {o.title}
                     </h3>
                     <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-4">
-                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">{o.text}</p>
+                      <p className="overflow-hidden text-[15px] leading-[1.7] text-white/85">
+                        {o.text}
+                      </p>
                     </div>
                     <div className="mt-6 h-px w-10 bg-[var(--gold)] transition-all duration-500 group-hover:w-24" />
                   </div>
@@ -317,7 +326,9 @@ function SurveillancePage() {
                     <p className="font-display text-4xl md:text-5xl font-semibold tracking-[-0.03em] text-[var(--gold)]">
                       10+
                     </p>
-                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">Years in the field</p>
+                    <p className="mt-2 text-sm uppercase tracking-[0.25em] text-white/70">
+                      Years in the field
+                    </p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-5">
@@ -325,7 +336,10 @@ function SurveillancePage() {
                     { src: survVms, alt: "Video management software control room" },
                     { src: survPerimeter, alt: "Outdoor perimeter surveillance camera at night" },
                   ].map((im) => (
-                    <div key={im.alt} className="group relative overflow-hidden rounded-2xl border border-white/10">
+                    <div
+                      key={im.alt}
+                      className="group relative overflow-hidden rounded-2xl border border-white/10"
+                    >
                       <img
                         src={im.src}
                         alt={im.alt}
@@ -353,7 +367,9 @@ function SurveillancePage() {
                       className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-[var(--gold)]/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     />
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">{w.title}</h3>
+                      <h3 className="text-base md:text-lg font-semibold leading-snug text-white">
+                        {w.title}
+                      </h3>
                       <div className="mt-4 h-px w-10 bg-[var(--gold)]/70 transition-all duration-500 group-hover:w-20" />
                     </div>
                     <span className="shrink-0 font-display text-2xl md:text-3xl font-semibold tracking-tight text-transparent [-webkit-text-stroke:1.5px_var(--gold)] opacity-50 transition-all duration-500 group-hover:opacity-100">
@@ -445,10 +461,14 @@ function SurveillancePage() {
                           </h3>
                           <div
                             className={`grid transition-all duration-500 ease-out ${
-                              isActive ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"
+                              isActive
+                                ? "grid-rows-[1fr] opacity-100 mt-3"
+                                : "grid-rows-[0fr] opacity-0"
                             }`}
                           >
-                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">{text}</p>
+                            <p className="overflow-hidden text-[14px] leading-[1.7] text-muted-foreground">
+                              {text}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -477,7 +497,9 @@ function SurveillancePage() {
                     <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-[var(--gold)]/35 text-[var(--gold)] transition-colors duration-500 group-hover:bg-[var(--gold)] group-hover:text-[var(--navy)]">
                       <Icon className="h-5 w-5" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">{ind.title}</h3>
+                    <h3 className="font-display text-lg font-semibold leading-snug text-[var(--navy)]">
+                      {ind.title}
+                    </h3>
                   </div>
                 </Reveal>
               );
@@ -494,8 +516,8 @@ function SurveillancePage() {
               <p className="gold-rule">Track record</p>
               <h2 className="heading-lg mt-6">Trusted Across the Region</h2>
               <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-muted-foreground">
-                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted Roya Ventures to power
-                their operations.
+                For over 10+ years, enterprises and institutions across Saudi Arabia have trusted
+                Roya Ventures to power their operations.
               </p>
               <div className="mt-8 gold-divider" />
               <Reveal>
@@ -506,7 +528,7 @@ function SurveillancePage() {
                       className="grid place-items-center rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] p-6 shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/40"
                     >
                       <img
-                        src={logo.url}
+                        src={logo}
                         alt="Client logo"
                         className="h-10 md:h-12 w-auto object-contain opacity-80 transition-opacity duration-500 hover:opacity-100"
                       />
@@ -523,8 +545,8 @@ function SurveillancePage() {
                   Warehouse, Riyadh
                 </h3>
                 <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">
-                  120-camera IP surveillance system covering internal operations and the entire perimeter. AI-assisted
-                  motion detection.
+                  120-camera IP surveillance system covering internal operations and the entire
+                  perimeter. AI-assisted motion detection.
                 </p>
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   {[shotWarehouse, shotWarehouse2, shotDominos].map((img, i) => (
@@ -533,7 +555,7 @@ function SurveillancePage() {
                       className="group overflow-hidden rounded-xl border border-[color-mix(in_oklab,var(--navy)_8%,transparent)] shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/45 hover:shadow-[var(--shadow-elegant)]"
                     >
                       <img
-                        src={img.url}
+                        src={img}
                         alt="Completed surveillance project"
                         loading="lazy"
                         className="h-20 sm:h-24 w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -587,7 +609,9 @@ function SurveillancePage() {
                   </AccordionPrimitive.Header>
                   <AccordionContent className="px-5 md:px-8 pb-7 pt-0">
                     <div className="gold-divider mb-5" />
-                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">{a}</p>
+                    <p className="text-[15px] md:text-base leading-[1.8] text-muted-foreground sm:pl-[3.25rem]">
+                      {a}
+                    </p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -609,8 +633,8 @@ function SurveillancePage() {
                   Ready to Build the Next Level Surveillance System?
                 </h2>
                 <p className="mt-5 mx-auto max-w-xl text-white/75 text-base md:text-lg leading-relaxed font-light">
-                  Schedule a complimentary consultation to explore solutions and a development roadmap with our custom
-                  surveillance systems company.
+                  Schedule a complimentary consultation to explore solutions and a development
+                  roadmap with our custom surveillance systems company.
                 </p>
                 <div className="mt-10 flex justify-center">
                   <Link to="/contact" className="btn-primary btn-on-dark">

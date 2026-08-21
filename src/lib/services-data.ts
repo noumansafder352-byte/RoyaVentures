@@ -1,5 +1,5 @@
-import svcElectricalAsset from "@/assets/svc-electrical-new.png.asset.json";
-const svcElectrical = svcElectricalAsset.url;
+import svcElectricalAsset from "@/assets/svc-electrical.png";
+const svcElectrical = svcElectricalAsset;
 import svcDatacenter from "@/assets/svc-datacenter.jpg";
 import svcNetworking from "@/assets/svc-networking.jpg";
 import svcFiber from "@/assets/svc-fiber.jpg";
@@ -10,8 +10,8 @@ import svcSignage from "@/assets/svc-signage-new.jpg";
 import svcPos from "@/assets/svc-pos.jpg";
 import svcWebdev from "@/assets/svc-webdev.jpg";
 import svcIt from "@/assets/svc-it.jpg";
-import svcFacilityAsset from "@/assets/svc-facility-new.jpg.asset.json";
-const svcFacility = svcFacilityAsset.url;
+import svcFacilityAsset from "@/assets/svc-facility.jpg";
+const svcFacility = svcFacilityAsset;
 
 export type Service = {
   slug: string;

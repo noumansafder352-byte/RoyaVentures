@@ -4,29 +4,35 @@ import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import heroImage from "@/assets/hero-clients.jpg";
-import avayaLogo from "@/assets/partners/core/avaya.png.asset.json";
-import ciscoLogo from "@/assets/partners/core/cisco.png.asset.json";
-import hikvisionLogo from "@/assets/partners/core/hikvision.png.asset.json";
-import nexenLogo from "@/assets/partners/core/nexen.png.asset.json";
-import prestigeLogo from "@/assets/partners/core/prestige.png.asset.json";
-import entry2exitLogo from "@/assets/partners/software/entry2exit.png.asset.json";
-import fadelLogo from "@/assets/partners/software/fadel.png.asset.json";
-import odooLogo from "@/assets/partners/software/odoo.png.asset.json";
-import sapaadLogo from "@/assets/partners/software/sapaad.png.asset.json";
-import coramLogo from "@/assets/partners/ai-video/coram.png.asset.json";
-import trassirLogo from "@/assets/partners/ai-video/trassir.png.asset.json";
-import vizo361Logo from "@/assets/partners/ai-video/vizo361.png.asset.json";
-import windroLogo from "@/assets/partners/smart-screens/windro.png.asset.json";
-import zhsunycoLogo from "@/assets/partners/smart-screens/zhsunyco.png.asset.json";
-
+import avayaLogo from "@/assets/partners/core/avaya.png";
+import ciscoLogo from "@/assets/partners/core/cisco.png";
+import hikvisionLogo from "@/assets/partners/core/hikvision.png";
+import nexenLogo from "@/assets/partners/core/nexen.png";
+import prestigeLogo from "@/assets/partners/core/prestige.png";
+import entry2exitLogo from "@/assets/partners/software/entry2exit.png";
+import fadelLogo from "@/assets/partners/software/fadel.png";
+import odooLogo from "@/assets/partners/software/odoo.png";
+import sapaadLogo from "@/assets/partners/software/sapaad.png";
+import coramLogo from "@/assets/partners/ai-video/coram.png";
+import trassirLogo from "@/assets/partners/ai-video/trassir.png";
+import vizo361Logo from "@/assets/partners/ai-video/vizo361.png";
+import windroLogo from "@/assets/partners/smart-screens/windro.png";
+import zhsunycoLogo from "@/assets/partners/smart-screens/zhsunyco.png";
 
 export const Route = createFileRoute("/partners")({
   head: () => ({
     meta: [
       { title: "Partners — Roya Ventures" },
-      { name: "description", content: "Roya Ventures' strategic technology partnerships — delivering innovative, reliable, and future-ready engineering and digital infrastructure solutions." },
+      {
+        name: "description",
+        content:
+          "Roya Ventures' strategic technology partnerships — delivering innovative, reliable, and future-ready engineering and digital infrastructure solutions.",
+      },
       { property: "og:title", content: "Partners — Roya Ventures" },
-      { property: "og:description", content: "Strategic technology partnerships that power world-class infrastructure." },
+      {
+        property: "og:description",
+        content: "Strategic technology partnerships that power world-class infrastructure.",
+      },
     ],
   }),
   component: PartnersPage,
@@ -34,29 +40,29 @@ export const Route = createFileRoute("/partners")({
 
 type PartnerLogo = { name: string; url: string };
 const CORE_TECH_LOGOS: PartnerLogo[] = [
-  { name: "Avaya", url: avayaLogo.url },
-  { name: "Cisco", url: ciscoLogo.url },
-  { name: "Hikvision", url: hikvisionLogo.url },
-  { name: "Nexen Strategy", url: nexenLogo.url },
-  { name: "Prestige Saudi Co. Ltd.", url: prestigeLogo.url },
+  { name: "Avaya", url: avayaLogo },
+  { name: "Cisco", url: ciscoLogo },
+  { name: "Hikvision", url: hikvisionLogo },
+  { name: "Nexen Strategy", url: nexenLogo },
+  { name: "Prestige Saudi Co. Ltd.", url: prestigeLogo },
 ];
 
 const SOFTWARE_LOGOS: PartnerLogo[] = [
-  { name: "Entry2Exit", url: entry2exitLogo.url },
-  { name: "Fadel Software Solutions", url: fadelLogo.url },
-  { name: "Odoo", url: odooLogo.url },
-  { name: "Sapaad", url: sapaadLogo.url },
+  { name: "Entry2Exit", url: entry2exitLogo },
+  { name: "Fadel Software Solutions", url: fadelLogo },
+  { name: "Odoo", url: odooLogo },
+  { name: "Sapaad", url: sapaadLogo },
 ];
 
 const AI_VIDEO_LOGOS: PartnerLogo[] = [
-  { name: "Coram", url: coramLogo.url },
-  { name: "Trassir", url: trassirLogo.url },
-  { name: "Vizo361", url: vizo361Logo.url },
+  { name: "Coram", url: coramLogo },
+  { name: "Trassir", url: trassirLogo },
+  { name: "Vizo361", url: vizo361Logo },
 ];
 
 const SMART_SCREEN_LOGOS: PartnerLogo[] = [
-  { name: "Windro", url: windroLogo.url },
-  { name: "ZhSunyco", url: zhsunycoLogo.url },
+  { name: "Windro", url: windroLogo },
+  { name: "ZhSunyco", url: zhsunycoLogo },
 ];
 
 const PARTNER_CATEGORIES: { name: string; logos?: PartnerLogo[] }[] = [
@@ -66,26 +72,40 @@ const PARTNER_CATEGORIES: { name: string; logos?: PartnerLogo[] }[] = [
   { name: "Smart Screens / Ink Displays", logos: SMART_SCREEN_LOGOS },
 ];
 
-
 function PartnersPage() {
   return (
     <SiteLayout transparentHeader>
       <PageHero
         eyebrow="Our Network"
-        title={<>Our <span className="text-[var(--gold)]">Partners</span></>}
+        title={
+          <>
+            Our <span className="text-[var(--gold)]">Partners</span>
+          </>
+        }
         subtitle="A curated ecosystem of technology manufacturers and solution providers enabling world-class engineering and digital infrastructure."
         image={heroImage}
         height="compact"
       />
 
       {/* Introduction */}
-      <section className="relative section-y overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
-        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-60" />
+      <section
+        className="relative section-y overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-60"
+        />
         <div className="container-px mx-auto">
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
               eyebrow="Strategic Partnerships"
-              title={<>Building Strong <em className="not-italic text-[var(--gold)]">Technology Partnerships</em></>}
+              title={
+                <>
+                  Building Strong{" "}
+                  <em className="not-italic text-[var(--gold)]">Technology Partnerships</em>
+                </>
+              }
               description="Roya Ventures collaborates with globally recognized technology manufacturers and solution providers to deliver innovative, reliable, and future-ready engineering and digital infrastructure solutions. Our strategic partnerships enable us to implement world-class technologies while maintaining the highest standards of quality, performance, and customer satisfaction."
               align="center"
             />
@@ -94,11 +114,19 @@ function PartnersPage() {
       </section>
 
       {/* Partner categories — matches Clients page design */}
-      <section className="section-y relative overflow-hidden" style={{ background: "var(--grad-ivory)" }}>
+      <section
+        className="section-y relative overflow-hidden"
+        style={{ background: "var(--grad-ivory)" }}
+      >
         <div className="container-px mx-auto">
           <SectionHeading
             eyebrow="Partner Ecosystem"
-            title={<>The specialists who <em className="not-italic text-[var(--gold)]">power our delivery.</em></>}
+            title={
+              <>
+                The specialists who{" "}
+                <em className="not-italic text-[var(--gold)]">power our delivery.</em>
+              </>
+            }
             description="A structured view of our technology alliances."
           />
 
