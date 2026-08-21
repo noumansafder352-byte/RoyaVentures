@@ -37,11 +37,27 @@ const DIRECTORY: { name: string; phone?: string; email: string }[] = [
 function ContactPage() {
   const [sent, setSent] = useState(false);
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4500);
-    (e.target as HTMLFormElement).reset();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", "6142bc91-734e-4321-b2b1-d4232f7b81e1");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setSent(true);
+        form.reset();
+        setTimeout(() => setSent(false), 4500);
+      }
+    } catch {
+      setSent(false);
+    }
   };
 
   return (
