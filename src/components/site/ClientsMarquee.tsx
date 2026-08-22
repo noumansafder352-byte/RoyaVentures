@@ -1,6 +1,23 @@
 import { SectionHeading } from "@/components/site/SectionHeading";
 
-const logoModules = import.meta.glob("../../assets/clients/clients*.{jpg,jpeg,png}", {
+// const logoModules = import.meta.glob("../../assets/clients/clients*.{jpg,jpeg,png}", {
+//   eager: true,
+//   query: "?url",
+//   import: "default",
+// });
+
+// const CLIENT_LOGOS = Object.entries(logoModules)
+//   .map(([path, url]) => {
+//     const match = path.match(/clients(\d+)\.(jpg|jpeg|png)$/i);
+
+//     return {
+//       n: Number(match?.[1] ?? 0),
+//       url: url as string,
+//     };
+//   })
+//   .sort((a, b) => a.n - b.n);
+
+const logoModules = import.meta.glob("../../assets/clients/*.{jpg,jpeg,png}", {
   eager: true,
   query: "?url",
   import: "default",
@@ -8,16 +25,18 @@ const logoModules = import.meta.glob("../../assets/clients/clients*.{jpg,jpeg,pn
 
 const CLIENT_LOGOS = Object.entries(logoModules)
   .map(([path, url]) => {
-    const match = path.match(/clients(\d+)\.(jpg|jpeg|png)$/i);
+    const fileName = path.split("/").pop() ?? "";
+    const name = fileName.replace(/\.(jpg|jpeg|png)$/i, "");
 
     return {
-      n: Number(match?.[1] ?? 0),
+      name,
       url: url as string,
     };
   })
-  .sort((a, b) => a.n - b.n);
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 export function ClientsMarquee() {
+  // const row = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
   const row = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
@@ -65,13 +84,13 @@ export function ClientsMarquee() {
         <div className="flex w-max marquee-track">
           {row.map((p, i) => (
             <div
-              key={`${p.n}-${i}`}
+              key={`${p.name}-${i}`}
               className="mx-4 flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-[color-mix(in_oklab,var(--navy)_10%,transparent)] bg-white shadow-[var(--shadow-card)] px-5 py-3 transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]/60 hover:shadow-[var(--shadow-elegant)]"
               data-cursor="hover"
             >
               <img
                 src={p.url}
-                alt={`Client ${p.n}`}
+                alt={p.name}
                 loading="lazy"
                 className="max-h-20 max-w-[88%] w-auto h-auto object-contain"
               />
