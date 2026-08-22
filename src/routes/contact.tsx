@@ -41,7 +41,7 @@ function ContactPage() {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", "6142bc91-734e-4321-b2b1-d4232f7b81e1");
+    formData.append("access_key", "629390d9-8036-4166-b055-80df20ef0d20");
 
     setStatus("submitting");
     try {
@@ -142,8 +142,7 @@ function ContactPage() {
                           </>
                         ) : status === "submitting" ? (
                           <>
-                            Sending…{" "}
-                            <Loader2 className="h-4 w-4 animate-spin" />
+                            Sending… <Loader2 className="h-4 w-4 animate-spin" />
                           </>
                         ) : (
                           <>
