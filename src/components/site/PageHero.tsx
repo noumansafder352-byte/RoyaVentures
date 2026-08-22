@@ -21,7 +21,7 @@ export function PageHero({
     <section
       className={[
         "relative isolate overflow-hidden text-white bg-noise",
-        height === "tall" ? "min-h-[100vh]" : "min-h-[70vh]",
+        height === "tall" ? "min-h-[85vh] md:min-h-[100vh]" : "min-h-[70vh]",
         "flex items-end",
       ].join(" ")}
     >
@@ -50,21 +50,17 @@ export function PageHero({
         <div className="absolute right-12 top-24 hidden md:block h-[60%] w-px bg-gradient-to-b from-transparent via-[var(--gold)]/40 to-transparent" />
       </div>
 
-      <div className="container-px mx-auto w-full pb-24 pt-44 md:pb-36 md:pt-52 relative">
+      <div className="container-px mx-auto w-full pb-16 pt-36 md:pb-36 md:pt-52 relative">
         <div className={["max-w-5xl", align === "center" ? "mx-auto text-center" : ""].join(" ")}>
           <p
-            className={[
-              "reveal-soft",
-              align === "center" ? "gold-rule-center" : "gold-rule",
-            ].join(" ")}
+            className={["reveal-soft", align === "center" ? "gold-rule-center" : "gold-rule"].join(
+              " ",
+            )}
             style={{ animationDelay: "0.05s" }}
           >
             {eyebrow}
           </p>
-          <h1
-            className="heading-xl mt-8 text-white reveal"
-            style={{ animationDelay: "0.15s" }}
-          >
+          <h1 className="heading-xl mt-8 text-white reveal" style={{ animationDelay: "0.15s" }}>
             {title}
           </h1>
           {subtitle && (
@@ -89,7 +85,10 @@ export function PageHero({
         </div>
 
         {/* Bottom meta row */}
-        <div className="mt-20 hidden md:flex items-end gap-8 reveal-soft" style={{ animationDelay: "0.7s" }}>
+        <div
+          className="mt-20 hidden md:flex items-end gap-8 reveal-soft"
+          style={{ animationDelay: "0.7s" }}
+        >
           <div className="flex items-center gap-4 text-white/55 text-xs tracking-[0.3em] uppercase">
             <span className="gold-divider" />
             <span>Technology · Infrastructure · Engineering</span>
