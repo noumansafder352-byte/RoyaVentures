@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://royaventure.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/clients</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/partners</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/projects</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/team</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/data-center-setup</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/digital-signage-ink-displays</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/electrical-contracts</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/ems-access-control</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/ethernet-fiber-cabling</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/fire-fighting</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/integrated-facility-management</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/it-services</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/networking</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/pos-hardware-software</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/surveillance-system</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://royaventure.com/services/website-development-amcs</loc>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

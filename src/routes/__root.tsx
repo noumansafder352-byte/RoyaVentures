@@ -21,7 +21,9 @@ function NotFoundComponent() {
           The page you're looking for has been moved or no longer exists.
         </p>
         <div className="mt-8">
-          <Link to="/" className="btn-primary">Return home</Link>
+          <Link to="/" className="btn-primary">
+            Return home
+          </Link>
         </div>
       </div>
     </div>
@@ -45,12 +47,17 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="btn-primary"
           >
             Try again
           </button>
-          <a href="/" className="btn-ghost">Go home</a>
+          <a href="/" className="btn-ghost">
+            Go home
+          </a>
         </div>
       </div>
     </div>
@@ -63,7 +70,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Roya Ventures — Global Corporate Consulting" },
-      { name: "description", content: "Roya Ventures partners with leaders to deliver lasting impact across strategy, transformation and growth." },
+      {
+        name: "description",
+        content:
+          "Roya Ventures partners with leaders to deliver lasting impact across strategy, transformation and growth.",
+      },
       { name: "author", content: "Roya Ventures" },
       { property: "og:title", content: "Roya Ventures" },
       { property: "og:description", content: "Premium international corporate consulting." },
