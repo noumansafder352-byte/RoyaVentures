@@ -7,18 +7,30 @@ const QUICK = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/services", label: "Services" },
+  { to: "/projects", label: "Projects" },
+  { to: "/team", label: "Team" },
   { to: "/clients", label: "Clients" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 const SERVICES = [
-  "Electrical Contracts",
-  "Data Center Setup",
-  "Networking",
-  "Ethernet & Fiber Cabling",
-  "Fire Fighting",
-  "EMS System & Access Control",
-];
+  { to: "/services/data-center-setup", label: "Data Center Setup" },
+  { to: "/services/networking", label: "Networking" },
+  { to: "/services/ethernet-fiber-cabling", label: "Ethernet & Fiber Cabling" },
+  {
+    to: "/services/surveillance-system",
+    label: "Surveillance System & AI Video Analytics",
+  },
+  {
+    to: "/services/integrated-facility-management",
+    label: "Integrated Facility Management",
+  },
+  {
+    to: "/services/digital-signage-ink-displays",
+    label: "Digital Signage & Ink Displays",
+  },
+  { to: "/services/fire-fighting", label: "Fire Fighting" },
+] as const;
 
 const PHONES = ["+966 509600042", "+966 50 287 9339"];
 const EMAILS = ["info@royaventure.com", "sales@royaventure.com"];
@@ -129,15 +141,16 @@ export function Footer() {
           <div className="lg:col-span-3">
             <ColumnHeading>Services</ColumnHeading>
             <ul className="space-y-3.5 text-sm">
-              {SERVICES.map((s) => (
-                <li key={s}>
-                  <span
+              {SERVICES.map((service) => (
+                <li key={service.to}>
+                  <Link
+                    to={service.to}
                     className="group inline-flex items-center gap-2 text-white/75 hover:text-[var(--gold)] transition-colors cursor-default"
                     data-cursor="hover"
                   >
                     <span className="h-px w-0 bg-[var(--gold)] transition-all duration-300 group-hover:w-3" />
-                    {s}
-                  </span>
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>
