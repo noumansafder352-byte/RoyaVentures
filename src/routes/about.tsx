@@ -67,14 +67,13 @@ function AboutPage() {
   return (
     <SiteLayout transparentHeader>
       <PageHero
-        eyebrow="About the firm"
+        eyebrow="About Us"
         title={
           <>
-            Counsel measured in <span className="text-[var(--gold)]">decades</span>, not
-            deliverables.
+            Who We <span className="text-[var(--gold)]">Are</span>
           </>
         }
-        subtitle="Roya Ventures is an international advisory firm built around senior partners and an enduring commitment to the leaders we serve."
+        subtitle=" We solve infrastructure problems by thinking in systems. Serving enterprise and retail clients across Saudi Arabia and internationally with integrated IT, security, and network solutions."
         image={heroAbout}
       />
 
@@ -84,25 +83,27 @@ function AboutPage() {
         <div className="container-px mx-auto grid gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <Reveal>
-              <p className="gold-rule">Company overview</p>
+              <p className="gold-rule">Company Overview</p>
               <h2 className="heading-sub-lg mt-6">
-                A house of advisors, operators and{" "}
-                <em className="not-italic text-[var(--gold)]">capital specialists.</em>
+                Trusted Enterprise Infrastructure and Tech Solutions Partner in{" "}
+                <em className="not-italic text-[var(--gold)]">KSA & International</em>
               </h2>
               <div className="mt-8 gold-divider" />
             </Reveal>
           </div>
           <Reveal as="div" delay={0.1} className="lg:col-span-7 space-y-7">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              For more than 8 Years, Roya Ventures has worked alongside boards, founders and
-              institutional investors to address the questions that define long-term value.
+            <p className="mt-16 text-base text-muted-foreground leading-relaxed">
+              Roya Ventures is a Saudi Arabia-based technology and engineering company with 8+ years
+              of delivering mission-critical infrastructure for enterprises, institutions, and
+              developers. We handle everything from initial design to long-term support. So you
+              never have to chase multiple vendors for answers.
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed">
+            {/* <p className="text-base text-muted-foreground leading-relaxed">
               Our partners have led mandates across more than forty markets, advising on
               transactions and programmes that have shaped industries. The firm remains independent
               by design, ensuring every recommendation is made in the singular interest of the
               client.
-            </p>
+            </p> */}
           </Reveal>
         </div>
       </section>
@@ -170,14 +171,13 @@ function AboutPage() {
                 <p className="eyebrow text-[var(--gold)]">Our Mission</p>
               </div>
               <h3 className="heading-lg mt-7">
-                To equip leaders with the clarity to make{" "}
-                <em className="not-italic text-[var(--gold)]">consequential decisions.</em>
+                Building Infrastructure That Lasts
+                {/* <em className="not-italic text-[var(--gold)]">consequential decisions.</em> */}
               </h3>
               <div className="mt-7 gold-divider" />
               <p className="mt-7 text-lg leading-[1.75] text-muted-foreground font-light">
-                We exist to translate complexity into conviction — distilling market dynamics,
-                organisational realities and strategic ambitions into decisions our clients can make
-                with confidence and conscience.
+                To deliver integrated infrastructure and technology solutions that support Saudi
+                Arabia's modernization and enable ambitious enterprises to operate without limits.
               </p>
             </Reveal>
           </div>
