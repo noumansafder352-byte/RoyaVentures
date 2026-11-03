@@ -5,11 +5,22 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { PartnersMarquee } from "@/components/site/PartnersMarquee";
 import { Reveal } from "@/components/site/Reveal";
-import { Target, Eye, Gem, Users, Globe2, Scale, Lightbulb, Award } from "lucide-react";
+import {
+  Target,
+  Eye,
+  Ear,
+  PencilRuler,
+  Wrench,
+  ShieldCheck,
+  TrendingUp,
+  Headset,
+  Quote,
+} from "lucide-react";
 import heroAbout from "@/assets/hero-about.jpg";
 import aboutMission from "@/assets/our-mission.png";
 import aboutVision from "@/assets/about-vision.jpg";
 import featureLeadership from "@/assets/feature-leadership.jpg";
+import ceoPortrait from "@/assets/ceo-raza-saudagar.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -32,34 +43,34 @@ export const Route = createFileRoute("/about")({
 
 const VALUES = [
   {
-    icon: Scale,
-    title: "Integrity",
-    text: "Every recommendation is grounded in evidence and bound by an unwavering ethical standard.",
+    icon: Ear,
+    title: "Listen & Understand",
+    text: "We start by asking the right questions. What’s working? What isn’t? Where are the bottlenecks and operational challenges? We take the time to understand your business, identify the root causes, and uncover opportunities for improvement.",
   },
   {
-    icon: Gem,
-    title: "Excellence",
-    text: "We commit to craftsmanship in the work — from analysis to delivery — without compromise.",
+    icon: PencilRuler,
+    title: "Design with Purpose",
+    text: "We develop tailored solutions aligned with your operational needs, business objectives, future growth plans, and budget. Every design is practical, scalable, and built around how your business actually operates.",
   },
   {
-    icon: Users,
-    title: "Partnership",
-    text: "We operate alongside our clients, not above them, with shared accountability for the outcome.",
+    icon: Wrench,
+    title: "Build It Right",
+    text: "We believe in doing things right the first time. No shortcuts. No disconnected, piecemeal solutions. We integrate every component into a cohesive system, with proper cabling, configuration, and implementation.",
   },
   {
-    icon: Lightbulb,
-    title: "Insight",
-    text: "Original perspective drawn from a rare blend of operating, advisory and capital expertise.",
+    icon: ShieldCheck,
+    title: "Test & Validate",
+    text: "Before handover, we rigorously test every component and integration to ensure everything performs as intended. We validate functionality, reliability, and readiness under real-world operating conditions.",
   },
   {
-    icon: Globe2,
-    title: "Global Outlook",
-    text: "A multinational team that thinks in cross-border systems and local realities at once.",
+    icon: TrendingUp,
+    title: "Scale & Optimize",
+    text: "As your business evolves, your infrastructure should evolve with it. We help you expand locations, increase capacity, and optimize performance through flexible, scalable solutions designed to support growth without disruption.",
   },
   {
-    icon: Award,
-    title: "Discretion",
-    text: "Confidentiality is the foundation of our practice. Trust is the only currency that compounds.",
+    icon: Headset,
+    title: "Support for the Long Term",
+    text: "Our commitment doesn’t end at installation. We provide ongoing monitoring, maintenance, upgrades, and responsive technical support to keep your systems reliable, secure, and performing at their best.",
   },
 ];
 
@@ -92,7 +103,7 @@ function AboutPage() {
             </Reveal>
           </div>
           <Reveal as="div" delay={0.1} className="lg:col-span-7 space-y-7">
-            <p className="mt-16 text-base text-muted-foreground leading-relaxed">
+            <p className="lg:mt-16 text-lg md:text-xl text-muted-foreground leading-relaxed">
               Roya Ventures is a Saudi Arabia-based technology and engineering company with 8+ years
               of delivering mission-critical infrastructure for enterprises, institutions, and
               developers. We handle everything from initial design to long-term support. So you
@@ -122,18 +133,77 @@ function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--navy-deep)]/85 via-[var(--navy-deep)]/30 to-transparent" />
         </div>
         {/* Floating panel that overlaps */}
-        <div className="container-px mx-auto relative -mt-32 md:-mt-44 mb-24">
+        <div className="container-px mx-auto relative -mt-32 md:-mt-44 mb-24 grid gap-8 lg:grid-cols-2">
           <Reveal>
-            <div className="max-w-2xl ml-0 rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_10%,transparent)] shadow-[var(--shadow-elegant)] p-10 md:p-14">
-              <p className="gold-rule">Leadership philosophy</p>
-              <p className="mt-7 font-display text-2xl md:text-3xl font-light leading-[1.3] tracking-[-0.02em] text-[var(--navy)]">
-                "We are a partnership of practitioners — people who have built, bought, sold and
-                rebuilt the institutions we now advise. Counsel earned, not consulted."
+            <div className="h-full rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_10%,transparent)] shadow-[var(--shadow-elegant)] p-7 sm:p-10 md:p-14">
+              <p className="gold-rule">About Us — Roya Ventures</p>
+              <p className="mt-7 font-display text-base md:text-lg font-light leading-[1.7] tracking-[-0.02em] text-[var(--navy)]">
+                Roya Ventures is a MISA‑registered international advisory and integration firm
+                bridging Saudi Arabia and India through technology, infrastructure, and strategic
+                investment. Built on decades of counsel and execution excellence, we combine
+                senior‑level insight with hands‑on delivery across enterprise systems, ELV, data
+                centers, and smart‑market solutions.
               </p>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="h-px w-12 bg-[var(--gold)]" />
-                <p className="text-xs tracking-[0.25em] uppercase text-muted-foreground">
-                  A.H. Hart, Managing Partner
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="h-full rounded-2xl bg-card border border-[color-mix(in_oklab,var(--navy)_10%,transparent)] shadow-[var(--shadow-elegant)] p-7 sm:p-10 md:p-14">
+              <p className="gold-rule">Our Philosophy</p>
+              <p className="mt-7 font-display text-base md:text-lg font-light leading-[1.7] tracking-[-0.02em] text-[var(--navy)]">
+                Our philosophy is simple — measured counsel, not deliverables. We believe in
+                partnerships that endure, solutions that scale, and ventures that reflect the
+                highest standards of quality and compliance. Roya Ventures continues the legacy of
+                SpiderNet, maintaining the same technology, personnel, and standards while expanding
+                into premium‑first ventures that define the next era of integrated innovation.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Message from the CEO — portrait + quote split */}
+      <section className="section-y relative isolate overflow-hidden bg-[var(--stone)]">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--gold)_14%,transparent),transparent_60%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,color-mix(in_oklab,var(--emerald-deep)_8%,transparent),transparent_60%)]" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-32 -left-24 h-96 w-96 rounded-full border border-[var(--gold)]/25"
+        />
+        <div className="container-px mx-auto grid items-center gap-16 lg:grid-cols-12 lg:gap-20">
+          <Reveal className="lg:col-span-5">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              <div className="absolute -inset-4 rounded-2xl border border-[var(--gold)]/40 -z-10" />
+              <div className="overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)]">
+                <img
+                  src={ceoPortrait}
+                  alt="Raza Saudagar, Chief Executive Officer of Roya Ventures"
+                  width={1254}
+                  height={1254}
+                  loading="lazy"
+                  className="w-full aspect-square object-cover transition-transform duration-[1800ms] hover:scale-105"
+                />
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="lg:col-span-7">
+            <p className="gold-rule">Message from the CEO</p>
+            <Quote
+              aria-hidden
+              strokeWidth={1}
+              className="mt-10 h-14 w-14 text-[var(--gold)] rotate-180"
+            />
+            <blockquote className="mt-6 font-display text-xl md:text-2xl font-light leading-[1.5] tracking-[-0.02em] text-[var(--navy)]">
+              At Roya Ventures, our mission is to transform how technology and business converge
+              across borders. We stand for precision, trust, and long‑term value — empowering
+              organizations to build with confidence and lead with clarity.
+            </blockquote>
+            <div className="mt-10 flex items-center gap-4">
+              <div className="h-px w-12 bg-[var(--gold)]" />
+              <div>
+                <p className="font-display text-xl text-[var(--navy)]">Raza Saudagar</p>
+                <p className="mt-1 text-xs tracking-[0.25em] uppercase text-muted-foreground">
+                  CEO, Roya Ventures
                 </p>
               </div>
             </div>
@@ -203,17 +273,18 @@ function AboutPage() {
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-[var(--gold)]/10 border border-[var(--gold)]/40 text-[var(--gold)]">
                   <Eye className="h-5 w-5" strokeWidth={1.5} />
                 </div>
-                <p className="eyebrow text-[var(--gold)]">Our Vision</p>
+                <p className="eyebrow text-[var(--gold)]">Our Expertise</p>
               </div>
               <h3 className="heading-lg mt-7">
-                To be the most trusted advisory partner for{" "}
-                <em className="not-italic text-[var(--gold)]">ambitious enterprises worldwide.</em>
+                What We <em className="not-italic text-[var(--gold)]">Actually Do</em>
               </h3>
               <div className="mt-7 gold-divider" />
               <p className="mt-7 text-lg leading-[1.75] text-muted-foreground font-light">
-                A firm defined by the calibre of its people, the discretion of its practice and the
-                enduring success of the institutions it serves — a steady hand for leaders building
-                companies that matter.
+                We build and maintain integrated infrastructure systems that enable enterprise and
+                retail operations to scale reliably. Whether it's IT infrastructure, IP
+                surveillance, networking, or data centre solutions, we handle complete deployments
+                across single or multiple locations, then provide long-term support so your systems
+                keep working. Systems that work. Infrastructure that lasts.
               </p>
             </Reveal>
           </div>
@@ -236,13 +307,8 @@ function AboutPage() {
         />
         <div className="container-px mx-auto relative">
           <SectionHeading
-            eyebrow="Core values"
-            title={
-              <>
-                Six principles. <em className="not-italic text-[var(--gold)]">One standard.</em>
-              </>
-            }
-            description="The values that anchor every engagement, every conversation and every recommendation."
+            // eyebrow="Core values"
+            title={<>Our Approach</>}
           />
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {VALUES.map(({ icon: Icon, title, text }, i) => (
@@ -291,7 +357,7 @@ function AboutPage() {
                       <span className="h-px w-8 bg-[var(--gold)]/60" />
                     </div>
                     {/* Title overlaid on the visual */}
-                    <h3 className="absolute bottom-6 left-7 right-7 font-display text-2xl font-light tracking-tight text-white">
+                    <h3 className="absolute bottom-6 left-7 right-28 font-display text-2xl font-light tracking-tight text-white">
                       {title}
                     </h3>
                     {/* Gold hairline at bottom */}
@@ -321,7 +387,8 @@ function AboutPage() {
 
       <CtaBanner
         eyebrow="Begin a conversation"
-        title="Partner with a firm that takes the long view."
+        title="Ready to Build Infrastructure that Actually Works?
+"
       />
 
       <PartnersMarquee />

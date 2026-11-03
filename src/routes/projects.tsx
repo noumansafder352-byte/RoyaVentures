@@ -702,7 +702,7 @@ function ProjectsPage() {
             {INDUSTRIES.map(({ icon: Icon, name }, i) => (
               <Reveal key={name} delay={(i % 4) * 0.06}>
                 <div
-                  className="group relative h-full rounded-2xl bg-white border border-[color-mix(in_oklab,var(--navy)_10%,transparent)] shadow-[var(--shadow-card)] p-8 text-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[var(--shadow-elegant)] hover:border-[var(--gold)]/60"
+                  className="group relative h-full rounded-2xl bg-white border border-[color-mix(in_oklab,var(--navy)_10%,transparent)] shadow-[var(--shadow-card)] p-5 sm:p-8 text-center transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[var(--shadow-elegant)] hover:border-[var(--gold)]/60"
                   data-cursor="hover"
                 >
                   <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-[var(--gold)]/40 bg-[var(--gold)]/10 text-[var(--emerald-deep)] transition-all duration-500 group-hover:bg-[var(--gold)] group-hover:text-white group-hover:-rotate-6">

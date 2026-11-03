@@ -391,9 +391,9 @@ function DataCenterSetupPage() {
           <div className="mt-14 relative mx-auto max-w-7xl">
             <div
               aria-hidden
-              className="absolute left-[1.4rem] top-2 bottom-2 w-px lg:left-0 lg:right-0 lg:top-[1.4rem] lg:bottom-auto lg:h-px lg:w-auto bg-[linear-gradient(to_bottom,transparent,color-mix(in_oklab,var(--gold)_60%,transparent)_12%,color-mix(in_oklab,var(--gold)_60%,transparent)_88%,transparent)] lg:bg-[linear-gradient(to_right,transparent,color-mix(in_oklab,var(--gold)_60%,transparent)_10%,color-mix(in_oklab,var(--gold)_60%,transparent)_90%,transparent)]"
+              className="absolute left-[1.4rem] top-2 bottom-2 w-px xl:left-0 xl:right-0 xl:top-[1.4rem] xl:bottom-auto xl:h-px xl:w-auto bg-[linear-gradient(to_bottom,transparent,color-mix(in_oklab,var(--gold)_60%,transparent)_12%,color-mix(in_oklab,var(--gold)_60%,transparent)_88%,transparent)] xl:bg-[linear-gradient(to_right,transparent,color-mix(in_oklab,var(--gold)_60%,transparent)_10%,color-mix(in_oklab,var(--gold)_60%,transparent)_90%,transparent)]"
             />
-            <ol className="relative grid gap-8 lg:grid-cols-5 lg:gap-5 items-start">
+            <ol className="relative grid gap-8 xl:grid-cols-5 xl:gap-5 items-start">
               {PROCESS.map(([title, text], i) => {
                 const isActive = activeStep === i;
                 return (
@@ -405,7 +405,7 @@ function DataCenterSetupPage() {
                       onMouseLeave={() => setActiveStep(null)}
                       onClick={() => setActiveStep(isActive ? null : i)}
                     >
-                      <div className="absolute left-0 top-1 lg:static lg:mx-auto lg:mb-6 lg:flex lg:justify-center">
+                      <div className="absolute left-0 top-1 xl:static xl:mx-auto xl:mb-6 xl:flex xl:justify-center">
                         <div
                           className={`relative grid h-11 w-11 place-items-center rounded-full border font-display text-xs tracking-[0.08em] shadow-[0_10px_28px_-14px_color-mix(in_oklab,var(--gold)_80%,transparent)] transition-all duration-500 ${
                             isActive
@@ -425,7 +425,7 @@ function DataCenterSetupPage() {
                         </div>
                       </div>
 
-                      <div className="pl-[4.25rem] lg:pl-0">
+                      <div className="pl-[4.25rem] xl:pl-0">
                         <div
                           className={`relative overflow-hidden rounded-2xl border bg-card/85 backdrop-blur-sm p-6 shadow-[var(--shadow-card)] transition-all duration-500 ${
                             isActive
@@ -446,7 +446,7 @@ function DataCenterSetupPage() {
                               isActive ? "w-16" : "w-8 group-hover:w-16"
                             }`}
                           />
-                          <h3 className="mt-4 font-display text-lg font-semibold leading-[1.3] tracking-[-0.02em] text-[var(--navy)] lg:flex lg:min-h-[3.4rem] lg:items-start">
+                          <h3 className="mt-4 font-display text-lg font-semibold leading-[1.3] hyphens-auto tracking-[-0.02em] text-[var(--navy)] xl:flex xl:min-h-[3.4rem] xl:items-start">
                             {title}
                           </h3>
                           <div

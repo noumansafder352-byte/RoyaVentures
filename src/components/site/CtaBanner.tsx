@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export function CtaBanner({
   eyebrow = "Begin the conversation",
   title = "Let's architect what comes next.",
-  description = "From boardroom strategy to enterprise execution, our partners are ready to help you move with conviction.",
+  description = "Let's talk about what's broken in your current setup and how we'd approach re-building it.",
   showSecondary = true,
   floating = false,
 }: {
@@ -28,8 +28,21 @@ export function CtaBanner({
         <div className="absolute left-1/3 top-1/2 h-px w-40 bg-gradient-to-r from-transparent via-[var(--gold)]/60 to-transparent" />
       </div>
 
-      <div className={floating ? "px-8 md:px-14 lg:px-16 py-14 md:py-16 relative" : "container-px mx-auto py-16 md:py-20 relative"}>
-        <div className={["grid items-center gap-10", showSecondary ? "lg:grid-cols-[1.4fr_1fr] lg:gap-16" : "lg:grid-cols-[1.6fr_auto] lg:gap-16"].join(" ")}>
+      <div
+        className={
+          floating
+            ? "px-8 md:px-14 lg:px-16 py-14 md:py-16 relative"
+            : "container-px mx-auto py-16 md:py-20 relative"
+        }
+      >
+        <div
+          className={[
+            "grid items-center gap-10",
+            showSecondary
+              ? "lg:grid-cols-[1.4fr_1fr] lg:gap-16"
+              : "lg:grid-cols-[1.6fr_auto] lg:gap-16",
+          ].join(" ")}
+        >
           <div>
             <p className="gold-rule">{eyebrow}</p>
             <h2 className="mt-5 font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.08] tracking-[-0.03em] text-white max-w-2xl">
@@ -63,9 +76,18 @@ export function CtaBanner({
       <div className="container-px mx-auto">
         <div className="relative mx-auto max-w-6xl">
           {/* Decorative outer corner accents */}
-          <div aria-hidden className="absolute -top-3 -left-3 h-16 w-16 border-t-2 border-l-2 border-[var(--gold)]/60 rounded-tl-[1.75rem] pointer-events-none" />
-          <div aria-hidden className="absolute -bottom-3 -right-3 h-16 w-16 border-b-2 border-r-2 border-[var(--gold)]/60 rounded-br-[1.75rem] pointer-events-none" />
-          <div aria-hidden className="absolute -top-4 -right-4 h-full w-full rounded-[2rem] border border-[var(--gold)]/15 pointer-events-none" />
+          <div
+            aria-hidden
+            className="absolute -top-3 -left-3 h-16 w-16 border-t-2 border-l-2 border-[var(--gold)]/60 rounded-tl-[1.75rem] pointer-events-none"
+          />
+          <div
+            aria-hidden
+            className="absolute -bottom-3 -right-3 h-16 w-16 border-b-2 border-r-2 border-[var(--gold)]/60 rounded-br-[1.75rem] pointer-events-none"
+          />
+          <div
+            aria-hidden
+            className="absolute -top-4 -right-4 h-full w-full rounded-[2rem] border border-[var(--gold)]/15 pointer-events-none"
+          />
 
           {/* Floating card */}
           <div className="relative overflow-hidden rounded-[2rem] ring-1 ring-[var(--gold)]/25 shadow-[0_50px_120px_-30px_color-mix(in_oklab,var(--navy)_55%,transparent)]">

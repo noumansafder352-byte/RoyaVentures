@@ -8,6 +8,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { ClientsMarquee } from "@/components/site/ClientsMarquee";
 import { SERVICES } from "@/lib/services-data";
 import heroServices from "@/assets/hero-services.jpg";
+import { Handshake, BadgeDollarSign, LifeBuoy, Zap, Landmark } from "lucide-react";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
@@ -27,6 +28,34 @@ export const Route = createFileRoute("/services/")({
   }),
   component: ServicesPage,
 });
+
+const WHY_CHOOSE = [
+  {
+    icon: Handshake,
+    title: "Close Partnership",
+    text: "We work alongside you, provide regular updates, stay responsive, and solve problems together.",
+  },
+  {
+    icon: BadgeDollarSign,
+    title: "Fair Pricing",
+    text: "We don't charge premium rates for standard work. You get enterprise-quality infrastructure without inflated costs.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Long-Term Support",
+    text: "We design systems for the long run and prevent maintenance, lifecycle planning, and scaling as you grow.",
+  },
+  {
+    icon: Zap,
+    title: "Immediate Response",
+    text: "When something breaks, you need help fast. We prioritize speed without decreasing quality.",
+  },
+  {
+    icon: Landmark,
+    title: "Saudi Vision 2030",
+    text: "We support Saudi Arabia's infrastructure modernization. Smart systems and technology that enable growth.",
+  },
+];
 
 function ServicesPage() {
   return (
@@ -245,6 +274,101 @@ function ServicesPage() {
                 </div>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why clients choose us — bento grid with Vision 2030 highlight */}
+      <section className="section-y relative overflow-hidden bg-white">
+        <div className="absolute inset-0 -z-10 bg-radial-gold opacity-70" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full border border-[var(--gold)]/20"
+        />
+        <div className="container-px mx-auto relative">
+          <SectionHeading
+            eyebrow="Why Roya"
+            maxWidth="max-w-5xl"
+            title={
+              <>
+                Why Clients Choose <em className="not-italic text-[var(--gold)]">Roya Ventures</em>
+              </>
+            }
+          />
+
+          <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-6">
+            {WHY_CHOOSE.map(({ icon: Icon, title, text }, i) => {
+              const featured = i === WHY_CHOOSE.length - 1;
+              return (
+                <Reveal
+                  key={title}
+                  delay={(i % 3) * 0.08}
+                  className={i < 3 ? "lg:col-span-2" : "lg:col-span-3"}
+                >
+                  <div
+                    className={[
+                      "group relative h-full overflow-hidden rounded-[1.25rem] border p-9 md:p-10 transition-all duration-500 hover:-translate-y-2",
+                      featured
+                        ? "border-[var(--gold)]/40 bg-gradient-to-br from-[var(--navy-deep)] via-[var(--navy)] to-[color-mix(in_oklab,var(--emerald-deep)_70%,var(--navy-deep))] text-white shadow-[var(--shadow-elegant)]"
+                        : "border-[color-mix(in_oklab,var(--navy)_10%,transparent)] bg-white shadow-[var(--shadow-card)] hover:border-[var(--gold)]/60 hover:shadow-[var(--shadow-elegant)]",
+                    ].join(" ")}
+                    data-cursor="hover"
+                  >
+                    {/* Corner gold glow */}
+                    <div
+                      aria-hidden
+                      className={[
+                        "pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--gold)_35%,transparent),transparent_65%)] transition-opacity duration-700",
+                        featured ? "opacity-100" : "opacity-0 group-hover:opacity-100",
+                      ].join(" ")}
+                    />
+                    {/* Watermark icon */}
+                    <Icon
+                      aria-hidden
+                      strokeWidth={0.7}
+                      className={[
+                        "pointer-events-none absolute -right-8 -bottom-10 h-44 w-44 transition-transform duration-[1200ms] group-hover:scale-110 group-hover:-rotate-3",
+                        featured ? "text-[var(--gold)]/20" : "text-[var(--navy)]/[0.05]",
+                      ].join(" ")}
+                    />
+
+                    <div className="relative flex items-start justify-between">
+                      <div
+                        className={[
+                          "grid h-14 w-14 place-items-center rounded-2xl border transition-all duration-500 group-hover:-rotate-6",
+                          featured
+                            ? "border-[var(--gold)]/50 bg-[var(--gold)]/10 text-[var(--gold)]"
+                            : "border-[var(--gold)]/45 bg-white text-[var(--emerald-deep)] group-hover:bg-[var(--gold)] group-hover:text-white group-hover:border-[var(--gold)]",
+                        ].join(" ")}
+                      >
+                        <Icon className="h-6 w-6" strokeWidth={1.5} />
+                      </div>
+                      <span className="font-display text-xs tracking-[0.4em] text-[var(--gold)]/90">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+
+                    <h3
+                      className={[
+                        "relative mt-8 font-display text-2xl font-light tracking-tight",
+                        featured ? "text-white" : "text-[var(--navy)]",
+                      ].join(" ")}
+                    >
+                      {title}
+                    </h3>
+                    <div className="relative mt-5 gold-divider" />
+                    <p
+                      className={[
+                        "relative mt-5 leading-relaxed",
+                        featured ? "text-white/75" : "text-muted-foreground",
+                      ].join(" ")}
+                    >
+                      {text}
+                    </p>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

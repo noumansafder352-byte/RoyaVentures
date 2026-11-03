@@ -44,17 +44,19 @@ export function PartnersMarquee() {
         className="pointer-events-none absolute inset-0 -z-10 bg-radial-gold opacity-60"
       />
       <div className="container-px mx-auto">
-        <div className="mx-auto max-w-3xl text-center mb-14">
+        <div className="mx-auto max-w-6xl text-center mb-14">
           <SectionHeading
             eyebrow="Trusted Partners"
             title={
               <>
-                Engineered alongside the world's leading{" "}
-                <em className="not-italic text-[var(--gold)]">technology brands.</em>
+                We partnered with Global Technology Leaders to deliver{" "}
+                <em className="not-italic text-[var(--gold)]">enterprise-grade solutions.</em>
               </>
             }
-            description="We design and deliver solutions using trusted enterprise vendors across infrastructure, networking, cybersecurity, IT, and digital technologies."
+            description="Our partnerships with leading global technology vendors mean your infrastructure is built on proven solutions trusted by enterprises worldwide.
+"
             align="center"
+            maxWidth="max-w-6xl"
           />
         </div>
       </div>

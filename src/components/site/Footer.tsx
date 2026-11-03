@@ -76,7 +76,7 @@ export function Footer() {
 
       <div className="container-px mx-auto relative">
         {/* Main grid */}
-        <div className="grid gap-12 md:gap-x-10 lg:gap-x-16 xl:gap-x-20 md:grid-cols-2 lg:grid-cols-12 pt-16 pb-12">
+        <div className="grid gap-12 md:gap-x-10 lg:gap-x-8 xl:gap-x-20 md:grid-cols-2 lg:grid-cols-12 pt-16 pb-12">
           {/* Brand column — logos + description */}
           <div className="lg:col-span-4">
             <div className="inline-flex items-center gap-5 md:gap-6 rounded-2xl bg-white/95 px-5 py-3.5 shadow-lg ring-1 ring-white/20">

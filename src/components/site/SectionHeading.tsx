@@ -6,15 +6,17 @@ export function SectionHeading({
   description,
   align = "left",
   invert = false,
+  maxWidth = "max-w-3xl",
 }: {
   eyebrow?: string;
   title: ReactNode;
   description?: string;
   align?: "left" | "center";
   invert?: boolean;
+  maxWidth?: string;
 }) {
   return (
-    <div className={["max-w-3xl", align === "center" ? "mx-auto text-center" : ""].join(" ")}>
+    <div className={[maxWidth, align === "center" ? "mx-auto text-center" : ""].join(" ")}>
       {eyebrow && (
         <p className={align === "center" ? "gold-rule-center" : "gold-rule"}>
           {eyebrow}
